@@ -56,7 +56,7 @@ $(document).ready(function() {
         // map.fitBounds(layer.getBounds());
         var selection = layer.feature.properties.DISTRICT.toLowerCase();
         $.ajax({
-            url: location.protocol + "//" + location.host + "/pranmap.yipl.net/search/json",
+            url: location.protocol + "//" + location.host + "/search/json",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
@@ -69,7 +69,7 @@ $(document).ready(function() {
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/pranmap.yipl.net/search/map_ajax",
+            url: location.protocol + "//" + location.host + "/search/map_ajax",
             type: 'POST',
             dataType: 'html',
             data: {district: selection},

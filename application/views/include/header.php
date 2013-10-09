@@ -4,7 +4,14 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title><?php if(isset($title)) echo $title; ?></title>
+		<title>
+			<?php if(isset($title)) {
+				echo $title;
+			} else {
+				echo "Program for Accountability in Nepal";
+			}  
+			?>
+		</title>
 		<meta name="description" content="Responsive Header Nav">
 		<meta name="author" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
