@@ -7,7 +7,8 @@
             "bScrollCollapse": true,
             "bJQueryUI": true,
             "bAutoWidth": false,
-            "sPaginationType": "full_numbers"
+            "sPaginationType": "full_numbers",
+            "bDestroy": true
         }); 
     });
 </script>
