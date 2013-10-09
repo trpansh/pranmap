@@ -33,13 +33,13 @@
 
 	<div id="goto">
 		<div id="broucher">
-			<img src="assets/img/icon-broucher.png" title="Download Brochure" alt="Download Brochure" style="height:150px; width:150px;"></br></br><p>Know more about PRAN.</p><input class="button" name="download broucher" type="button" value="Download Brochure">
+			<img src="assets/img/icon-broucher.png" title="Download Brochure" alt="Download Brochure" style="height:150px; width:150px;"></br></br><p>Know more about PRAN.</p><a href="<?php echo site_url('about'); ?>"><input class="button" name="download broucher" type="button" value="Download Brochure"></a>
 		</div>
 		<div id="viewmap">
-			<img src="assets/img/icon-map.png" title="View Map" alt="View Map" style="height:150px; width:150px;"></br></br><p>For better insights on PRAN activities</p><input class="button" name="viewmap" type="button" value="View Map">
+			<img src="assets/img/icon-map.png" title="View Map" alt="View Map" style="height:150px; width:150px;"></br></br><p>For better insights on PRAN activities</p><a href="<?php echo site_url(); ?>"><input class="button" name="viewmap" type="button" value="View Map"></a>
 		</div>
 		<div id="contact">
-			<img src="assets/img/icon-contact.png" title="Contact Us" alt="Contact Us" style="height:150px; width:150px;"></br></br><p>Want to be associated with PRAN ?</p><input class="button" name="gotocontact" type="button" value="Contact Us">
+			<img src="assets/img/icon-contact.png" title="Contact Us" alt="Contact Us" style="height:150px; width:150px;"></br></br><p>Want to be associated with PRAN ?</p><a href="<?php echo site_url('contact'); ?>"><input class="button" name="gotocontact" type="button" value="Contact Us"></a>
 		</div>		
 	</div>
 	
