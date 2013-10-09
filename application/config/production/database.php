@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'pranmap.yipl.net';
+$db['default']['hostname'] = 'yipl.net';
 $db['default']['username'] = 'pranmap_admin';
 $db['default']['password'] = 'admin';
 $db['default']['database'] = 'pranmap_db';
