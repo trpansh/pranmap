@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'mysql5.000webhost.com';
-$db['default']['username'] = 'a7378490_pran';
-$db['default']['password'] = 'lfc-1892';
-$db['default']['database'] = 'a7378490_pran';
+$db['default']['hostname'] = 'pranmap.yipl.net';
+$db['default']['username'] = 'pranmap_admin';
+$db['default']['password'] = 'admin';
+$db['default']['database'] = 'pranmap_db';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
