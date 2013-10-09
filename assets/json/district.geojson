@@ -1,0 +1,156 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "HQ_NAME": "Biratnagar", "DISTRICT": "Morang" }, "geometry": { "type": "Point", "coordinates": [ 87.483929096092808, 26.586894403023134 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "HQ_NAME": "Diktel", "DISTRICT": "Khotang" }, "geometry": { "type": "Point", "coordinates": [ 86.801055908203125, 27.222742080688477 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "HQ_NAME": "Taplejung", "DISTRICT": "Taplejung" }, "geometry": { "type": "Point", "coordinates": [ 87.808719049019231, 27.561897693504914 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "HQ_NAME": "Phidim", "DISTRICT": "Panchthar" }, "geometry": { "type": "Point", "coordinates": [ 87.836196174865904, 27.160978136123699 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "HQ_NAME": "Ilam", "DISTRICT": "Ilam" }, "geometry": { "type": "Point", "coordinates": [ 87.889422006423814, 26.88032186495963 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "HQ_NAME": "Bhadrapur", "DISTRICT": "Jhapa" }, "geometry": { "type": "Point", "coordinates": [ 87.966545328696924, 26.569220814613278 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "HQ_NAME": "Khandabari", "DISTRICT": "Sankhuwasabha" }, "geometry": { "type": "Point", "coordinates": [ 87.275898118293952, 27.565910936165398 ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "HQ_NAME": "Myanglung", "DISTRICT": "Terhathum" }, "geometry": { "type": "Point", "coordinates": [ 87.532076926200844, 27.180496535514983 ] } }
+,
+{ "type": "Feature", "id": 8, "properties": { "HQ_NAME": "Dhankuta", "DISTRICT": "Dhankuta" }, "geometry": { "type": "Point", "coordinates": [ 87.329099836288407, 26.983244986503578 ] } }
+,
+{ "type": "Feature", "id": 9, "properties": { "HQ_NAME": "Bhojpur", "DISTRICT": "Bhojpur" }, "geometry": { "type": "Point", "coordinates": [ 87.051750183105469, 27.175823211669922 ] } }
+,
+{ "type": "Feature", "id": 10, "properties": { "HQ_NAME": "Inaruwa", "DISTRICT": "Sunsari" }, "geometry": { "type": "Point", "coordinates": [ 87.151664733886719, 26.655132613395843 ] } }
+,
+{ "type": "Feature", "id": 11, "properties": { "HQ_NAME": "Salleri", "DISTRICT": "Solukhumbu" }, "geometry": { "type": "Point", "coordinates": [ 86.73285407601206, 27.713554797997105 ] } }
+,
+{ "type": "Feature", "id": 12, "properties": { "HQ_NAME": "Okhaldhunga", "DISTRICT": "Okhaldhunga" }, "geometry": { "type": "Point", "coordinates": [ 86.418245358131173, 27.341007483081874 ] } }
+,
+{ "type": "Feature", "id": 13, "properties": { "HQ_NAME": "Gaighat", "DISTRICT": "Udayapur" }, "geometry": { "type": "Point", "coordinates": [ 86.692534843629787, 26.906482291679705 ] } }
+,
+{ "type": "Feature", "id": 14, "properties": { "HQ_NAME": "Rajbiraj", "DISTRICT": "Saptari" }, "geometry": { "type": "Point", "coordinates": [ 86.710714577276121, 26.604007734296967 ] } }
+,
+{ "type": "Feature", "id": 15, "properties": { "HQ_NAME": "Siraha", "DISTRICT": "Siraha" }, "geometry": { "type": "Point", "coordinates": [ 86.331920037788763, 26.766116134332943 ] } }
+,
+{ "type": "Feature", "id": 16, "properties": { "HQ_NAME": "Charikot", "DISTRICT": "Dolakha" }, "geometry": { "type": "Point", "coordinates": [ 86.179988887783395, 27.745343437439139 ] } }
+,
+{ "type": "Feature", "id": 17, "properties": { "HQ_NAME": "Manthali", "DISTRICT": "Ramechhap" }, "geometry": { "type": "Point", "coordinates": [ 86.138623035183116, 27.40969142704412 ] } }
+,
+{ "type": "Feature", "id": 18, "properties": { "HQ_NAME": "Kamalamai", "DISTRICT": "Sindhuli" }, "geometry": { "type": "Point", "coordinates": [ 85.909523010253906, 27.259733700904956 ] } }
+,
+{ "type": "Feature", "id": 19, "properties": { "HQ_NAME": "Janakpur", "DISTRICT": "Dhanusa" }, "geometry": { "type": "Point", "coordinates": [ 86.036551592792833, 26.838701456005385 ] } }
+,
+{ "type": "Feature", "id": 20, "properties": { "HQ_NAME": "Jaleswor", "DISTRICT": "Mahottari" }, "geometry": { "type": "Point", "coordinates": [ 85.80887837649918, 26.887568617783238 ] } }
+,
+{ "type": "Feature", "id": 21, "properties": { "HQ_NAME": "Malangawa", "DISTRICT": "Sarlahi" }, "geometry": { "type": "Point", "coordinates": [ 85.571769101665524, 26.992340239797954 ] } }
+,
+{ "type": "Feature", "id": 22, "properties": { "HQ_NAME": "Dhunche", "DISTRICT": "Rasuwa" }, "geometry": { "type": "Point", "coordinates": [ 85.351145110344092, 28.179774081936046 ] } }
+,
+{ "type": "Feature", "id": 23, "properties": { "HQ_NAME": "Chautara", "DISTRICT": "Sindhupalchok" }, "geometry": { "type": "Point", "coordinates": [ 85.716178894042969, 27.896298525776217 ] } }
+,
+{ "type": "Feature", "id": 24, "properties": { "HQ_NAME": "Bidur", "DISTRICT": "Nuwakot" }, "geometry": { "type": "Point", "coordinates": [ 85.199068389152686, 27.905334653793293 ] } }
+,
+{ "type": "Feature", "id": 25, "properties": { "HQ_NAME": "Dhadingbesi", "DISTRICT": "Dhading" }, "geometry": { "type": "Point", "coordinates": [ 84.874353227676437, 27.876832962036133 ] } }
+,
+{ "type": "Feature", "id": 26, "properties": { "HQ_NAME": "Kathmandu", "DISTRICT": "Kathmandu" }, "geometry": { "type": "Point", "coordinates": [ 85.328433684133543, 27.758325033371101 ] } }
+,
+{ "type": "Feature", "id": 27, "properties": { "HQ_NAME": "Bhaktapur", "DISTRICT": "Bhaktapur" }, "geometry": { "type": "Point", "coordinates": [ 85.433830261230469, 27.685693740844727 ] } }
+,
+{ "type": "Feature", "id": 28, "properties": { "HQ_NAME": "Lalitpur", "DISTRICT": "Lalitpur" }, "geometry": { "type": "Point", "coordinates": [ 85.316073508232108, 27.522815483159562 ] } }
+,
+{ "type": "Feature", "id": 29, "properties": { "HQ_NAME": "Dhulikhel", "DISTRICT": "Kabhrepalanchok" }, "geometry": { "type": "Point", "coordinates": [ 85.597899109316003, 27.551188852496896 ] } }
+,
+{ "type": "Feature", "id": 30, "properties": { "HQ_NAME": "Gaur", "DISTRICT": "Rautahat" }, "geometry": { "type": "Point", "coordinates": [ 85.295192968921711, 27.006393360808058 ] } }
+,
+{ "type": "Feature", "id": 31, "properties": { "HQ_NAME": "Kalaiya", "DISTRICT": "Bara" }, "geometry": { "type": "Point", "coordinates": [ 85.070954983493991, 27.112543244636729 ] } }
+,
+{ "type": "Feature", "id": 32, "properties": { "HQ_NAME": "Birganj", "DISTRICT": "Parsa" }, "geometry": { "type": "Point", "coordinates": [ 84.78256426171653, 27.213997665153997 ] } }
+,
+{ "type": "Feature", "id": 33, "properties": { "HQ_NAME": "Hetauda", "DISTRICT": "Makwanpur" }, "geometry": { "type": "Point", "coordinates": [ 85.013614404125164, 27.511065099529471 ] } }
+,
+{ "type": "Feature", "id": 34, "properties": { "HQ_NAME": "Bharatpur", "DISTRICT": "Chitwan" }, "geometry": { "type": "Point", "coordinates": [ 84.449549152866368, 27.573411608483951 ] } }
+,
+{ "type": "Feature", "id": 35, "properties": { "HQ_NAME": "Parasi", "DISTRICT": "Nawalparasi" }, "geometry": { "type": "Point", "coordinates": [ 83.927537177662629, 27.645409701313326 ] } }
+,
+{ "type": "Feature", "id": 36, "properties": { "HQ_NAME": "Kapilvastu", "DISTRICT": "Kapilvastu" }, "geometry": { "type": "Point", "coordinates": [ 82.979365579207226, 27.642671820884001 ] } }
+,
+{ "type": "Feature", "id": 37, "properties": { "HQ_NAME": "Tansen", "DISTRICT": "Palpa" }, "geometry": { "type": "Point", "coordinates": [ 83.582746575016117, 27.827674671235915 ] } }
+,
+{ "type": "Feature", "id": 38, "properties": { "HQ_NAME": "Syangja", "DISTRICT": "Syangja" }, "geometry": { "type": "Point", "coordinates": [ 83.838554382324219, 28.029744350681145 ] } }
+,
+{ "type": "Feature", "id": 39, "properties": { "HQ_NAME": "Sandhikharka", "DISTRICT": "Arghakhanchi" }, "geometry": { "type": "Point", "coordinates": [ 83.123684235788332, 27.922850811252438 ] } }
+,
+{ "type": "Feature", "id": 40, "properties": { "HQ_NAME": "Tamghas", "DISTRICT": "Gulmi" }, "geometry": { "type": "Point", "coordinates": [ 83.328929426990726, 28.085387570903809 ] } }
+,
+{ "type": "Feature", "id": 41, "properties": { "HQ_NAME": "Gorkha", "DISTRICT": "Gorkha" }, "geometry": { "type": "Point", "coordinates": [ 84.792766485886091, 28.225364919594433 ] } }
+,
+{ "type": "Feature", "id": 42, "properties": { "HQ_NAME": "Damauli", "DISTRICT": "Tanahu" }, "geometry": { "type": "Point", "coordinates": [ 84.292213439941406, 27.987340927124023 ] } }
+,
+{ "type": "Feature", "id": 43, "properties": { "HQ_NAME": "Besishahar", "DISTRICT": "Lamjung" }, "geometry": { "type": "Point", "coordinates": [ 84.439003435625253, 28.294025740837245 ] } }
+,
+{ "type": "Feature", "id": 44, "properties": { "HQ_NAME": "Pokhara", "DISTRICT": "Kaski" }, "geometry": { "type": "Point", "coordinates": [ 83.985438994192137, 28.367708608499935 ] } }
+,
+{ "type": "Feature", "id": 45, "properties": { "HQ_NAME": "Chame", "DISTRICT": "Manang" }, "geometry": { "type": "Point", "coordinates": [ 84.225806633180582, 28.669081373642268 ] } }
+,
+{ "type": "Feature", "id": 46, "properties": { "HQ_NAME": "Kusma", "DISTRICT": "Parbat" }, "geometry": { "type": "Point", "coordinates": [ 83.72299829144491, 28.251137155408941 ] } }
+,
+{ "type": "Feature", "id": 47, "properties": { "HQ_NAME": "Baglung", "DISTRICT": "Baglung" }, "geometry": { "type": "Point", "coordinates": [ 83.245140858691215, 28.324217900243902 ] } }
+,
+{ "type": "Feature", "id": 48, "properties": { "HQ_NAME": "Beni", "DISTRICT": "Myagdi" }, "geometry": { "type": "Point", "coordinates": [ 83.43011914678155, 28.531762810486345 ] } }
+,
+{ "type": "Feature", "id": 49, "properties": { "HQ_NAME": "Jomsom", "DISTRICT": "Mustang" }, "geometry": { "type": "Point", "coordinates": [ 83.797756333625983, 28.941597943947279 ] } }
+,
+{ "type": "Feature", "id": 50, "properties": { "HQ_NAME": "Musikot", "DISTRICT": "Rukum" }, "geometry": { "type": "Point", "coordinates": [ 82.713836222488951, 28.693144164299156 ] } }
+,
+{ "type": "Feature", "id": 51, "properties": { "HQ_NAME": "Salyan Khalanga", "DISTRICT": "Salyan" }, "geometry": { "type": "Point", "coordinates": [ 82.174568120340425, 28.429264263090257 ] } }
+,
+{ "type": "Feature", "id": 52, "properties": { "HQ_NAME": "Liwang", "DISTRICT": "Rolpa" }, "geometry": { "type": "Point", "coordinates": [ 82.629631042480469, 28.315114974975586 ] } }
+,
+{ "type": "Feature", "id": 53, "properties": { "HQ_NAME": "Pyuthan Khalanga", "DISTRICT": "Pyuthan" }, "geometry": { "type": "Point", "coordinates": [ 82.874954223632813, 28.096305847167969 ] } }
+,
+{ "type": "Feature", "id": 54, "properties": { "HQ_NAME": "Tribhuwannagar", "DISTRICT": "Dang Deukhuri" }, "geometry": { "type": "Point", "coordinates": [ 82.455656845462727, 27.957835762149571 ] } }
+,
+{ "type": "Feature", "id": 55, "properties": { "HQ_NAME": "Siddharthanagar", "DISTRICT": "Rupandehi" }, "geometry": { "type": "Point", "coordinates": [ 83.378455114059236, 27.60504423178126 ] } }
+,
+{ "type": "Feature", "id": 56, "properties": { "HQ_NAME": "Nepalganj", "DISTRICT": "Banke" }, "geometry": { "type": "Point", "coordinates": [ 81.815592408943701, 28.070892333984375 ] } }
+,
+{ "type": "Feature", "id": 57, "properties": { "HQ_NAME": "Gulariya", "DISTRICT": "Bardiya" }, "geometry": { "type": "Point", "coordinates": [ 81.361477148609211, 28.392221184509783 ] } }
+,
+{ "type": "Feature", "id": 58, "properties": { "HQ_NAME": "Birendranagar", "DISTRICT": "Surkhet" }, "geometry": { "type": "Point", "coordinates": [ 81.625946044921875, 28.594808578491211 ] } }
+,
+{ "type": "Feature", "id": 59, "properties": { "HQ_NAME": "Narayan", "DISTRICT": "Dailekh" }, "geometry": { "type": "Point", "coordinates": [ 81.706306457519531, 28.846395492553711 ] } }
+,
+{ "type": "Feature", "id": 60, "properties": { "HQ_NAME": "khalanga", "DISTRICT": "Jajarkot" }, "geometry": { "type": "Point", "coordinates": [ 82.15090424519336, 28.859384632721369 ] } }
+,
+{ "type": "Feature", "id": 61, "properties": { "HQ_NAME": "Dunai", "DISTRICT": "Dolpa" }, "geometry": { "type": "Point", "coordinates": [ 83.073192511276716, 29.180112029038106 ] } }
+,
+{ "type": "Feature", "id": 62, "properties": { "HQ_NAME": "Jumla Khalanga", "DISTRICT": "Jumla" }, "geometry": { "type": "Point", "coordinates": [ 82.186126708984375, 29.288976669311523 ] } }
+,
+{ "type": "Feature", "id": 63, "properties": { "HQ_NAME": "Manma", "DISTRICT": "Kalikot" }, "geometry": { "type": "Point", "coordinates": [ 81.729760106113773, 29.194148473922855 ] } }
+,
+{ "type": "Feature", "id": 64, "properties": { "HQ_NAME": "Gamgadhi", "DISTRICT": "Mugu" }, "geometry": { "type": "Point", "coordinates": [ 82.384687045551942, 29.625891301922046 ] } }
+,
+{ "type": "Feature", "id": 65, "properties": { "HQ_NAME": "Simikot", "DISTRICT": "Humla" }, "geometry": { "type": "Point", "coordinates": [ 81.894455957718122, 30.051045465774749 ] } }
+,
+{ "type": "Feature", "id": 66, "properties": { "HQ_NAME": "Chainpur", "DISTRICT": "Bajhang" }, "geometry": { "type": "Point", "coordinates": [ 81.187754721611, 29.67719652938494 ] } }
+,
+{ "type": "Feature", "id": 67, "properties": { "HQ_NAME": "Martadi", "DISTRICT": "Bajura" }, "geometry": { "type": "Point", "coordinates": [ 81.56261249098992, 29.502723150436527 ] } }
+,
+{ "type": "Feature", "id": 68, "properties": { "HQ_NAME": "Mangalsen", "DISTRICT": "Achham" }, "geometry": { "type": "Point", "coordinates": [ 81.268365066158367, 29.139505817905437 ] } }
+,
+{ "type": "Feature", "id": 69, "properties": { "HQ_NAME": "Dipayal Silgadhi", "DISTRICT": "Doti" }, "geometry": { "type": "Point", "coordinates": [ 80.863060221275049, 29.171544208160149 ] } }
+,
+{ "type": "Feature", "id": 70, "properties": { "HQ_NAME": "Dhangadhi", "DISTRICT": "Kailali" }, "geometry": { "type": "Point", "coordinates": [ 80.889086142746763, 28.708174614936848 ] } }
+,
+{ "type": "Feature", "id": 71, "properties": { "HQ_NAME": "Bhim Datta", "DISTRICT": "Kanchanpur" }, "geometry": { "type": "Point", "coordinates": [ 80.295419288139655, 28.905216941589188 ] } }
+,
+{ "type": "Feature", "id": 72, "properties": { "HQ_NAME": "Dadeldhura", "DISTRICT": "Dadeldhura" }, "geometry": { "type": "Point", "coordinates": [ 80.474836754340814, 29.242436179870438 ] } }
+,
+{ "type": "Feature", "id": 73, "properties": { "HQ_NAME": "Baitadi", "DISTRICT": "Baitadi" }, "geometry": { "type": "Point", "coordinates": [ 80.56156186158789, 29.542167844711258 ] } }
+,
+{ "type": "Feature", "id": 74, "properties": { "HQ_NAME": "Darchula", "DISTRICT": "Darchula" }, "geometry": { "type": "Point", "coordinates": [ 80.807792716972997, 29.900390944694664 ] } }
+
+]
+}
