@@ -1,28 +1,27 @@
-<script type="text/javascript">
-    $(document).ready(function() {
-        // Data Tables
-        $('#result').dataTable({
-            "sScrollX": "100%",
-            "sScrollXInner": "200%",
-            "bScrollCollapse": true,
-            "bJQueryUI": true,
-            "bAutoWidth": false,
-            "sPaginationType": "full_numbers",
-            "bDestroy": true
-        }); 
-    });
-</script>
 <?php 
     if (isset($result)) {
         $items = $result;
     } elseif (isset($filter)) {
         $items = $filter;  
     }
-?>
 
-<?php    
+    // Check for items
     if (isset($items)) {;
 ?>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Data Tables
+            $('#result').dataTable({
+                "sScrollX": "100%",
+                "sScrollXInner": "200%",
+                "bScrollCollapse": true,
+                "bJQueryUI": true,
+                "bAutoWidth": false,
+                "sPaginationType": "full_numbers",
+                "bDestroy": true
+            }); 
+        });
+    </script>
     <table id="result">
         <thead>
             <tr>
@@ -64,5 +63,4 @@
         </tbody>
     </table>
 <?php } ?>
-
 <?php if (isset($error)) var_dump($error); ?>

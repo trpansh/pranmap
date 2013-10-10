@@ -1,5 +1,6 @@
 <?php $this->load->view('include/header'); ?>
 	<div id="map"></div>
+    <div id="loading"></div>
     <div class="search">
         <div id="filters">
             <?php 
@@ -101,10 +102,11 @@
                 $tools = array(
                         '' => 'Select Tool',
                         'citizen charter' => 'Citizen Charter',
-                        'check list of entitlements' => 'Check List of Entitlements',
+                        'checklist of entitlements' => 'Checklist of Entitlements',
                         'budgets of local bodies' => 'Budgets of Local Bodies',
+                        'budget demystification and outreach' => 'Budget Demystification and Outreach',
                         'right to information' => 'Right to Information',
-                        'check list' => "Check list of Relevant Laws, Policies, Regulations that Affect a Citizen's Life",
+                        'checklist of law and rules' => 'Checklist of Law and Rules',
                         'civic education' => 'Civic Education',
                         'public expenditure tracking' => 'Public Expenditure Tracking',
                         'check list of standards & indicators' => 'Check list of Standards & Indicators',
@@ -114,15 +116,23 @@
                         'public audit' => 'Public Audit',
                         'public revenue monitoring' => 'Public Revenue Monitoring',
                         'public help desk' => 'Public Help Desk',
+                        'policy appraisal' => 'Policy Appraisal',
+                        'social security allowance fund' => 'Social Security Allowance Fund',
+                        'identified sector for pets' => 'Identified Sector for PETS',
+                        'budget work' => 'Budget Work',
+                        'independent budget analysis' => 'Independent Budget Anlaysis',
                         'citizen complaint structures' => 'Citizen Complaint Structures',
                         'tracking of public services' => 'Tracking of Public Services',
                         'zero corruption campaign' => 'Zero Corruption Campaign',
                         'citizen watch group' => 'Citizen Watch Group',
                         'citizen jury' => 'Citizen Jury',
+                        'civic education' => 'Civic Education',
+                        'analysis of national budgets' => 'Analysis of National Budgets',
                         'public grievance redressal mechanism' => 'Public Grievance Redressal Mechanism',
                         'multi-stakeholder groups' => 'Multi-stakeholder Groups',
                         'participatory planning' => 'Participatory Planning',
                         'participatory budgeting' => 'Participatory Budgeting',
+                        'participatory national model budget' => 'Participatory National Model Budget',
                         'community led procurement' => 'Community Led Procurement',
                         'declaration of assets' => 'Declaration of Assets',
                         'understanding conflict of interest' => 'Understanding Conflict of Interest',
@@ -133,16 +143,18 @@
                 $sector = array(
                         '' => 'Select Sector',
                         'agriculture' => 'Agriculture',
-                        'awareness raising' => 'Awareness Raising',
-                        'budget' => 'Budget',
+                        // 'awareness raising' => 'Awareness Raising',
+                        // 'budget' => 'Budget',
                         'education' => 'Education',
-                        'entitlements' => 'Entitlements',
-                        'good governance' => 'Good Governance',
+                        // 'entitlements' => 'Entitlements',
+                        'finance' => 'Finance',
+                        'social protection' => 'Social Protection',
+                        // 'good governance' => 'Good Governance',
                         'health' => 'Health',
-                        'infrastructure' => 'Infrastructure',
+                        // 'infrastructure' => 'Infrastructure',
                         'law and justice' => 'Law and Justice',
-                        'local development' => 'Local Development',
-                        'performance monitoring' => 'Performance Monitoring',
+                        // 'local development' => 'Local Development',
+                        // 'performance monitoring' => 'Performance Monitoring',
                         'public administration' => 'Public Administration',
                         'water and sanitation' => 'Water and Sanitation'
                     );

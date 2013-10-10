@@ -140,6 +140,10 @@ section p {
 	min-height: 350px;
 }
 
+.contact {
+	min-height: 369px;
+}
+
 #map {
 	height:400px;
 	width: 100%;
@@ -246,6 +250,14 @@ section p {
 
 }
 
+#loading {
+    width: 100%;
+    height: 100%;
+    background: url("../img/loading.gif") no-repeat center center #fff;
+    position: fixed;
+    opacity: 0.7;
+}
+
 #about, #contact-detail{
 	width: 42%;
 	float: left;
@@ -274,9 +286,6 @@ section #contact-detail p{
 	padding-left:61px;
 
 }
-
-
-
 
 #carousel, div#contact-form {
 	width: 56%;
@@ -331,7 +340,6 @@ section #contact-detail p{
 	width:33%;
 	text-align: center;
 }
-
 
 
 /* this is extra css yet to be implemented on home page */
@@ -665,7 +673,7 @@ section #contact-detail p{
 */
 
 
-#form-input, textarea {
+.form-input, textarea {
 	/*width:84%;*/
 	min-width: 90%;
 	width: auto;
@@ -706,6 +714,10 @@ input#form-submit:hover, .button:hover, .go:hover {
 	opacity: 0.9;
 }
 
+/*input#form-submit {
+	float:left;
+}
+*/
 .button{
 	margin:auto;
 }
@@ -740,6 +752,28 @@ footer span#right {
 	float: right;
 }
 
+
+.error, .success {
+	margin-left: 2px;
+	text-align: right;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	border: 1px solid #D0D0D0;
+	float: left;
+}
+
+.success {
+	width: 395px;
+	background-color: #DFF2BF;
+	background-image: url('../img/success.png');
+}
+
+.error {
+	width: 180px;
+	background-color: #FF9494;
+	background-image: url('../img/error.png')
+}
 
 
 
@@ -903,7 +937,7 @@ nav {
 }
 
 nav ul, nav:active ul { 
-	z-index: 100;
+	z-index: 1001;
 	display: none;
 	position: absolute;
 	padding: 20px;

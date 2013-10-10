@@ -4,6 +4,7 @@
 			$tables = $this->db->list_tables();
 			$index = 0;
 			foreach ($tables as $table) {
+				$this->db->cache_on();
 				$this->db->like('Organization', $match);
 				$this->db->or_like('Contact_Person', $match);
 				$this->db->or_like('District', $match);
@@ -16,6 +17,7 @@
 
 		function filter($batch, $tool, $district, $sector, $theme, $funding, $status) {
 			if ($batch != FALSE) {
+				$this->db->cache_on();
 				$this->_tool($tool);
 				$this->_district($district);
 				$this->_sector($sector);
@@ -27,6 +29,7 @@
 			} else {
 				$tables = $this->db->list_tables();
 				$index = 0;
+				$this->db->cache_on();
 				foreach ($tables as $table) {
 					$this->_tool($tool);
 					$this->_district($district);
@@ -42,13 +45,16 @@
 		}
 
 		function ajax_call($district) {
+			$this->db->cache_on();
 			$data = $this->filter(FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE);
 			foreach ($data as $value) {
 				foreach ($value->result() as $output) {
 					$filter[] = $output;
 				}
 			}
-			return $filter;
+			if (isset($filter)) {
+				return $filter;
+			}
 		}
 
 		private function _tool($tool) {

@@ -10,10 +10,10 @@ $(document).ready(function() {
     var legend = L.mapbox.legendControl({ position: 'topright' }).addLegend(getLegendHTML()).addTo(map);
     map.attributionControl.addAttribution("PRAN &copy; 2013");
 
-	L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
-  		key: 'c9d322df6bdc4f088f0affd664e76506',
-  		styleId: 1930
-	}).addTo(map);
+	// L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
+ //  		key: 'c9d322df6bdc4f088f0affd664e76506',
+ //  		styleId: 1930
+	// }).addTo(map);
 
     function getStyle(feature) {
         for (var key in districtInfo) {
@@ -56,7 +56,7 @@ $(document).ready(function() {
         // map.fitBounds(layer.getBounds());
         var selection = layer.feature.properties.DISTRICT.toLowerCase();
         $.ajax({
-            url: location.protocol + "//" + location.host + "/search/json",
+            url: location.protocol + "//" + location.host + "/PRAN/search/json",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
@@ -69,7 +69,7 @@ $(document).ready(function() {
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/search/map_ajax",
+            url: location.protocol + "//" + location.host + "/PRAN/search/map_ajax",
             type: 'POST',
             dataType: 'html',
             data: {district: selection},
@@ -211,5 +211,15 @@ $(document).ready(function() {
             }]
         });
     }
+
+    $('#loading')
+        .hide()
+        .ajaxStart(function() {
+            $(this).show();
+        })
+        .ajaxStop(function() {
+            $(this).hide();
+        })
+    ;
 
 });	

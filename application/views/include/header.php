@@ -4,28 +4,22 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>
-			<?php if(isset($title)) {
-				echo $title;
-			} else {
-				echo "Program for Accountability in Nepal";
-			}  
-			?>
-		</title>
+		<title><?php if(isset($title)) { echo $title; } else { echo "Program for Accountability in Nepal"; }?></title>
 		<meta name="description" content="Responsive Header Nav">
 		<meta name="author" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<link rel="stylesheet" href="assets/css/styles.css">
+		<link rel="shortcut icon" href="assets/img/favicon-pran.ico" type="image/png">
 		<script src="assets/js/jquery-2.0.3.min.js"></script>
 		
 		<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') { ?>
 			<link rel="stylesheet" type="text/css" href="<?= site_url('assets/js/mapbox/mapbox.css'); ?>">
 		    <link rel="stylesheet" type="text/css" href="<?= site_url('assets/js/DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css'); ?>">
 		    <link rel="stylesheet" type="text/css" href="<?= site_url('assets/css/jquery-ui/jquery-ui.min.css'); ?>">
-			<script src="<?= site_url('assets/js/nepal-district.js'); ?>"></script>
-		    <script src="<?= site_url('assets/js/district-info.js'); ?>"></script>
-		    <script src="<?= site_url('assets/js/map.js'); ?>"></script>
+			<script src="<?= site_url('assets/js/nepal-district.js'); ?>" defer="defer"></script>
+		    <script src="<?= site_url('assets/js/district-info.js'); ?>" defer="defer"></script>
+		    <script src="<?= site_url('assets/js/map.js'); ?>" defer="defer"></script>
 		    <style type="text/css">
 		        #map { height: 450px; }
 
