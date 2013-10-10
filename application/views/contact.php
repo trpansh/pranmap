@@ -11,19 +11,19 @@
 			<p><a href="tel:977-1-4226792">977-1-4226792</a>
 			Ext. 6184.</p>
 			<h3>Website:</h3>
-			<p><a href="www.pran.org.np">www.pran.org.np</a></p>
+			<p><a href="http://www.pran.org.np" target="_blank">www.pran.org.np</a></p>
 		</section>
 
 		<div id="contact-form">
 			<form action="" method="post">  
 	                <!-- <label for="name">Name:</label><br/> -->
-	                <input class="form-input" type="text" name="name" required placeholder="Name"/>
+	                <input class="form-input" type="text" name="name" required placeholder="Name*"/>
 	                <br><br>
 	                <!-- <label for="email">Email:</label><br/> -->
-	                <input class="form-input" type="email" name="email" required placeholder="Email"/>
+	                <input class="form-input" type="email" name="email" required placeholder="Email*"/>
 	                <br><br>
 	                <!-- <label for="message">Message:</label><br/> -->
-	                <textarea name="message" required placeholder="Message"></textarea>
+	                <textarea name="message" required placeholder="Message*"></textarea>
 	                <br><br>
 	                <?php 
 			            if (isset($error)) { 

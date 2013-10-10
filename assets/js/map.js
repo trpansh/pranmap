@@ -56,7 +56,7 @@ $(document).ready(function() {
         // map.fitBounds(layer.getBounds());
         var selection = layer.feature.properties.DISTRICT.toLowerCase();
         $.ajax({
-            url: location.protocol + "//" + location.host + "/PRAN/search/json",
+            url: location.protocol + "//" + location.host + "/search/json",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},

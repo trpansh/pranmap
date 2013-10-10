@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin"
+			],
+			[
+				"preg",
+				"preg_match"
+			],
+			[
 				"pre",
 				"preg_match"
 			],
@@ -176,10 +184,6 @@
 				"array_count_values"
 			],
 			[
-				"preg",
-				"preg_quote  (function)"
-			],
-			[
 				"arr",
 				"array_push"
 			],
@@ -265,10 +269,6 @@
 			],
 			[
 				"margin",
-				"margin-left"
-			],
-			[
-				"mar",
 				"margin-left"
 			],
 			[
@@ -523,7 +523,7 @@
 			"file": "application/models/search_m.php",
 			"settings":
 			{
-				"buffer_size": 2528,
+				"buffer_size": 2836,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "assets/js/map.js",
 			"settings":
 			{
-				"buffer_size": 6991,
+				"buffer_size": 7201,
 				"line_ending": "Windows"
 			}
 		},
@@ -547,8 +547,16 @@
 			"file": "assets/css/styles.css",
 			"settings":
 			{
-				"buffer_size": 17357,
+				"buffer_size": 17472,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Sites/pranmap/assets/js/map.js",
+			"settings":
+			{
+				"buffer_size": 7196,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -563,7 +571,7 @@
 			"file": "application/views/about.php",
 			"settings":
 			{
-				"buffer_size": 3478,
+				"buffer_size": 3484,
 				"line_ending": "Unix"
 			}
 		},
@@ -587,7 +595,7 @@
 			"file": "application/controllers/search.php",
 			"settings":
 			{
-				"buffer_size": 6885,
+				"buffer_size": 6899,
 				"line_ending": "Windows"
 			}
 		},
@@ -595,7 +603,7 @@
 			"file": "application/views/filter.php",
 			"settings":
 			{
-				"buffer_size": 2100,
+				"buffer_size": 2312,
 				"line_ending": "Windows"
 			}
 		},
@@ -608,19 +616,27 @@
 			}
 		},
 		{
-			"file": "application/views/map.php",
-			"settings":
-			{
-				"buffer_size": 10616,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "application/config/production/database.php",
 			"settings":
 			{
 				"buffer_size": 3238,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/controllers/filters.php",
+			"settings":
+			{
+				"buffer_size": 1542,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/map.php",
+			"settings":
+			{
+				"buffer_size": 11043,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -704,9 +720,9 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/PRAN/application/views/map.php",
 		"/C/Users/User/Downloads/Compressed/CSSReset.com - Keeping Footer At The Bottom Of The Page/CSSReset.com - Keeping Footer At The Bottom Of The Page/style.css",
 		"/C/wamp/www/PRAN/assets/js/nepal-district.js",
-		"/C/wamp/www/PRAN/application/views/map.php",
 		"/C/Sites/CommunicationSouthAsia/index.php",
 		"/C/wamp/www/PRAN/application/views/contact.php",
 		"/C/wamp/www/PRAN/application/views/about.php",
@@ -850,6 +866,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"loading",
+			"go",
+			"search",
+			"go",
+			"gog",
+			"#filter",
+			"hash",
+			"has",
+			"map_ajax",
+			"value",
+			"gender",
+			"tool",
+			"funding",
+			"Funding",
 			"FALSE",
 			"loading",
 			"url",
@@ -963,21 +993,7 @@
 			"batch",
 			"filter",
 			"value",
-			"get",
-			"active",
-			"from",
-			"district",
-			"Array",
-			"No",
-			"Published",
-			"Author",
-			"Book",
-			"argument",
-			"AnotherClass",
-			"ClassName",
-			"argument",
-			"AnotherClass",
-			"ClassName"
+			"get"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1003,6 +1019,7 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -1010,15 +1027,15 @@
 					"file": "application/models/search_m.php",
 					"settings":
 					{
-						"buffer_size": 2528,
+						"buffer_size": 2836,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1523,
-								1523
+								1159,
+								1159
 							]
 						],
 						"settings":
@@ -1130,7 +1147,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 635.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1140,15 +1157,15 @@
 					"file": "assets/js/map.js",
 					"settings":
 					{
-						"buffer_size": 6991,
+						"buffer_size": 7201,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6961,
-								6961
+								7068,
+								7068
 							]
 						],
 						"settings":
@@ -1261,7 +1278,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4051.0,
+						"translation.y": 4000.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1401,15 +1418,15 @@
 					"file": "assets/css/styles.css",
 					"settings":
 					{
-						"buffer_size": 17357,
+						"buffer_size": 17472,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4645,
-								4645
+								4903,
+								4903
 							]
 						],
 						"settings":
@@ -1521,13 +1538,144 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4825.0,
+						"translation.y": 4805.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
+					"file": "/C/Sites/pranmap/assets/js/map.js",
+					"settings":
+					{
+						"buffer_size": 7196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2165,
+								2165
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"sublime_auto_complete": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1200.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "application/controllers/about.php",
 					"settings":
 					{
@@ -1657,19 +1805,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "application/views/about.php",
 					"settings":
 					{
-						"buffer_size": 3478,
+						"buffer_size": 3484,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2979,
-								2979
+								1645,
+								1645
 							]
 						],
 						"settings":
@@ -1780,14 +1928,14 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 1407.0,
-						"translation.y": 620.0,
+						"translation.x": 232.0,
+						"translation.y": 220.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "application/controllers/contact.php",
 					"settings":
 					{
@@ -1917,7 +2065,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "application/views/contact.php",
 					"settings":
 					{
@@ -2047,19 +2195,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "application/controllers/search.php",
 					"settings":
 					{
-						"buffer_size": 6885,
+						"buffer_size": 6899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2506,
+								2506
 							]
 						],
 						"settings":
@@ -2169,26 +2317,26 @@
 							"sublime_auto_complete": true,
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
-						"translation.x": 169.0,
-						"translation.y": 2520.0,
+						"translation.x": 0.0,
+						"translation.y": 784.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "application/views/filter.php",
 					"settings":
 					{
-						"buffer_size": 2100,
+						"buffer_size": 2312,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								590,
-								590
+								2223,
+								2223
 							]
 						],
 						"settings":
@@ -2301,13 +2449,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 880.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "application/controllers/map.php",
 					"settings":
 					{
@@ -2429,137 +2577,6 @@
 							"sublime_auto_complete": true,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "application/views/map.php",
-					"settings":
-					{
-						"buffer_size": 10616,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								96,
-								96
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2.0,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5.0,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10.0,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"sublime_auto_complete": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -2695,6 +2712,267 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "application/controllers/filters.php",
+					"settings":
+					{
+						"buffer_size": 1542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1020,
+								1020
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 23.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "application/views/map.php",
+					"settings":
+					{
+						"buffer_size": 11043,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								832,
+								832
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -2741,32 +3019,44 @@
 		"selected_items":
 		[
 			[
-				"producti",
-				"application/config/production/database.php"
-			],
-			[
 				"sty",
 				"assets/css/styles.css"
-			],
-			[
-				"heade",
-				"application/views/include/header.php"
 			],
 			[
 				"map",
 				"application/views/map.php"
 			],
 			[
-				"ma",
-				"application/controllers/map.php"
-			],
-			[
-				"filte",
-				"application/views/filter.php"
+				"about",
+				"application/views/about.php"
 			],
 			[
 				"sear",
+				"application/models/search_m.php"
+			],
+			[
+				"sea",
 				"application/controllers/search.php"
+			],
+			[
+				"fil",
+				"application/views/filter.php"
+			],
+			[
+				"filte",
+				"application/controllers/filters.php"
+			],
+			[
+				"producti",
+				"application/config/production/database.php"
+			],
+			[
+				"heade",
+				"application/views/include/header.php"
+			],
+			[
+				"ma",
+				"application/controllers/map.php"
 			],
 			[
 				"conta",
@@ -2779,10 +3069,6 @@
 			[
 				"ab",
 				"application/views/about.php"
-			],
-			[
-				"about",
-				"application/controllers/about.php"
 			],
 			[
 				"map.p",
@@ -2819,10 +3105,6 @@
 			[
 				"distric_in",
 				"assets/json/district_info.json"
-			],
-			[
-				"sea",
-				"application/models/search_m.php"
 			],
 			[
 				"number",

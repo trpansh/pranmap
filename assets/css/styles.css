@@ -302,6 +302,8 @@ section #contact-detail p{
 
 #carousel {
 	height:auto;
+	min-height: 100%;
+	overflow: hidden;
 }
 
 #description, footer {
