@@ -29,7 +29,7 @@
 				if ($district != FALSE) {
 					$cso_array = array();
 					$funding_array = array();
-					$data = $this->search_m->filter(FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE);
+					$data = $this->search_m->filter(FALSE, FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE);
 					foreach ($data as $value) {
 						foreach ($value->result() as $output) {
 							$result[] = $output;
@@ -145,7 +145,7 @@
             );
 			
 			foreach ($districts as $district) {
-				$data = $this->search_m->filter(FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE);
+				$data = $this->search_m->filter(FALSE, FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE);
 
 				foreach ($data as $value) {
 					foreach ($value->result() as $output) {

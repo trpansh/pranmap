@@ -15,10 +15,11 @@
 			return $query;
 		}
 
-		function filter($batch, $tool, $district, $sector, $theme, $funding, $status) {
+		function filter($batch, $tool, $title, $district, $sector, $theme, $funding, $status) {
 			if ($batch != FALSE) {
 				$this->db->cache_on();
 				$this->_tool($tool);
+				$this->_title($title);
 				$this->_district($district);
 				$this->_sector($sector);
 				$this->_theme($theme);
@@ -32,6 +33,7 @@
 				$this->db->cache_on();
 				foreach ($tables as $table) {
 					$this->_tool($tool);
+					$this->_title($title);
 					$this->_district($district);
 					$this->_sector($sector);
 					$this->_theme($theme);
@@ -46,7 +48,7 @@
 
 		function ajax_call($district) {
 			$this->db->cache_on();
-			$data = $this->filter(FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE);
+			$data = $this->filter(FALSE, FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE);
 			foreach ($data as $value) {
 				foreach ($value->result() as $output) {
 					$filter[] = $output;
@@ -56,10 +58,19 @@
 				return $filter;
 			}
 		}
-
+ 
 		private function _tool($tool) {
 			if ($tool != FALSE) {
 				$this->db->like('Tool', $tool);
+			}
+		}
+
+		private function _title($title) {
+			if ($title != FALSE && $title == 'both') {
+				$this->db->like('Title', 'mr');
+				$this->db->or_like('Title', 'ms');
+			} elseif ($title != FALSE) {
+				$this->db->like('Title', $title);
 			}
 		}
 

@@ -69,7 +69,7 @@ $(document).ready(function() {
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/PRAN/search/map_ajax",
+            url: location.protocol + "//" + location.host + "/search/map_ajax",
             type: 'POST',
             dataType: 'html',
             data: {district: selection},
@@ -221,5 +221,12 @@ $(document).ready(function() {
             $(this).hide();
         })
     ;
+
+    $('input[type="submit"]').attr('disabled','disabled');
+    $('select').change(function() {
+        if($(this).val() != '') {
+           $('input[type="submit"]').removeAttr('disabled');
+        }
+     });
 
 });	

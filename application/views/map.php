@@ -2,6 +2,23 @@
 	<div id="map"></div>
     <div id="loading"></div>
     <div class="search">
+        <div id="search-box">
+            <?php 
+                echo form_open('search');
+                $data = array(
+                        'name' => 'search',
+                        'id' => 'search',
+                        'size' => 40,
+                        'maxlength' => 100,
+                        'placeholder' => 'Search for District, Organization, Person, Tool',
+                        'pattern' => '.{3,}',
+                        'oninvalid' => "setCustomValidity('Minimum 3 letters or numbers.')",
+                        'oninput' => "setCustomValidity('')"
+                    );
+                echo form_input($data);
+                echo form_close(); 
+            ?>
+        </div>
         <div id="filters">
             <?php 
                 echo form_open('filters');
@@ -140,6 +157,20 @@
                     );
                 echo form_dropdown('tool', $tools);
 
+                $title = array(
+                    '' => 'Select Gender',
+                    'mr' => 'Male',
+                    'ms' => 'Female',
+                    'both' => 'Both'
+                );
+                echo form_dropdown('title', $title);
+
+                $ethnicity = array(
+                        '' => 'Select Ethnicity',
+
+                );
+                echo form_dropdown('ethnicity', $ethnicity);
+
                 $sector = array(
                         '' => 'Select Sector',
                         'agriculture' => 'Agriculture',
@@ -188,23 +219,6 @@
                 echo form_submit('submit', 'Go', "class='go'");
 
                 echo form_close();
-            ?>
-        </div>
-        <div id="search-box">
-            <?php 
-                echo form_open('search');
-                $data = array(
-                        'name' => 'search',
-                        'id' => 'search',
-                        'size' => 40,
-                        'maxlength' => 100,
-                        'placeholder' => 'Search for District, Organization, Person, Tool',
-                        'pattern' => '.{3,}',
-                        'oninvalid' => "setCustomValidity('Minimum 3 letters or numbers.')",
-                        'oninput' => "setCustomValidity('')"
-                    );
-                echo form_input($data);
-                echo form_close(); 
             ?>
         </div>
     </div>
