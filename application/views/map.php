@@ -1,6 +1,6 @@
 <?php $this->load->view('include/header'); ?>
-	<div id="map"></div>
-    <div id="loading"></div>
+	<div id="loading"></div>
+    <div id="map"></div>
     <div class="search">
         <div id="search-box">
             <?php 
@@ -34,8 +34,14 @@
                         'batch4sg' => 'Batch4 SG',
                         'batch4lg' => 'Batch4 LG'
                     );
-                echo form_dropdown('batch', $batch);
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php               
+                    echo form_dropdown('batch', $batch ,'',"class='custom-dropdown__select custom-dropdown__select--white'" );
+                ?>
+            </span>
 
+            <?php
                 $district = array (
                     '' => 'Select District',
                     'achham' => 'Achham',
@@ -114,8 +120,14 @@
                     'terhathum' => 'Terhathum',
                     'udayapur' => 'Udayapur'
                 );
-                echo form_dropdown('district', $district);
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('district', $district,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
 
+            <?php
                 $tools = array(
                         '' => 'Select Tool',
                         'citizen charter' => 'Citizen Charter',
@@ -155,42 +167,72 @@
                         'understanding conflict of interest' => 'Understanding Conflict of Interest',
                         'integrity pact' => 'Integrity Pact'
                     );
-                echo form_dropdown('tool', $tools);
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('tool', $tools,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
 
+            <?php
                 $title = array(
                     '' => 'Select Gender',
                     'mr' => 'Male',
                     'ms' => 'Female',
                     'both' => 'Both'
                 );
-                echo form_dropdown('title', $title);
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('title', $title,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
 
+            <?php
                 $ethnicity = array(
-                        '' => 'Select Ethnicity',
-
+                    '' => 'Select Ethnicity',
+                    'brahmin' => 'Brahmin',
+                    'chhetri' => 'Chhetri',
+                    'dalit' => 'Dalit',
+                    'janajati' => 'Janajati',
+                    'madhesi' => 'Madhesi',
+                    'muslim' => 'Muslim',
+                    'tharu' => 'Tharu'
                 );
-                echo form_dropdown('ethnicity', $ethnicity);
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('ethnicity', $ethnicity,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
 
+            <?php
                 $sector = array(
-                        '' => 'Select Sector',
-                        'agriculture' => 'Agriculture',
-                        // 'awareness raising' => 'Awareness Raising',
-                        // 'budget' => 'Budget',
-                        'education' => 'Education',
-                        // 'entitlements' => 'Entitlements',
-                        'finance' => 'Finance',
-                        'social protection' => 'Social Protection',
-                        // 'good governance' => 'Good Governance',
-                        'health' => 'Health',
-                        // 'infrastructure' => 'Infrastructure',
-                        'law and justice' => 'Law and Justice',
-                        // 'local development' => 'Local Development',
-                        // 'performance monitoring' => 'Performance Monitoring',
-                        'public administration' => 'Public Administration',
-                        'water and sanitation' => 'Water and Sanitation'
-                    );
-                echo form_dropdown('sector', $sector);
-                
+                    '' => 'Select Sector',
+                    'agriculture' => 'Agriculture',
+                    // 'awareness raising' => 'Awareness Raising',
+                    // 'budget' => 'Budget',
+                    'education' => 'Education',
+                    // 'entitlements' => 'Entitlements',
+                    'finance' => 'Finance',
+                    'social protection' => 'Social Protection',
+                    // 'good governance' => 'Good Governance',
+                    'health' => 'Health',
+                    // 'infrastructure' => 'Infrastructure',
+                    'law and justice' => 'Law and Justice',
+                    // 'local development' => 'Local Development',
+                    // 'performance monitoring' => 'Performance Monitoring',
+                    'public administration' => 'Public Administration',
+                    'water and sanitation' => 'Water and Sanitation'
+                );
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('sector', $sector,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
+            
+            <?php
                 $theme = array(
                         '' => 'Select Theme',
                         'municipal governance' => 'Municipal Governance (MG)',
@@ -198,32 +240,51 @@
                         'public sector governance' => 'Public Sector Governance (PSG)',
                         'public service delivery' => 'Public Service Delivery (PSD)'
                     );
-                echo form_dropdown('theme', $theme);
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('theme', $theme,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
 
+            <?php
                 $funding = array(
                         '' => 'Select Funding',
                         'mdtf' => 'Multi Donor Trust Fund (MDTF)',
                         'spbf' => 'State and Peace Building Fund (SPBF)',
                         'both' => 'Both'
                     );
-                echo form_dropdown('funding', $funding);
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">   
+                <?php
+                    echo form_dropdown('funding', $funding,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
 
+            <?php
                 $status = array(
                         '' => 'Select Status',
                         'ongoing' => 'Ongoing',
                         'complete' => 'Complete',
                         'both' => 'Both'
                     );
-                echo form_dropdown('status', $status);
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('status', $status,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
 
+            <?php
                 echo form_submit('submit', 'Go', "class='go'");
 
                 echo form_close();
             ?>
         </div>
     </div>
-    <?php if(isset($subview)) $this->load->view($subview); ?>
-    <div id="map-result"></div>
+    <div id="map-result">
+        <?php if(isset($subview)) $this->load->view($subview); ?>
+    </div>
     <div id="column-chart"></div>
 
 <?php $this->load->view('include/footer'); ?>

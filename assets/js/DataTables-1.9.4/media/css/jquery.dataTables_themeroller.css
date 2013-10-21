@@ -8,6 +8,7 @@ table.dataTable {
 	clear: both;
 	width: 100%;
 	border-collapse: collapse;
+	text-align: left;
 }
 
 table.dataTable thead th {
@@ -29,7 +30,7 @@ table.dataTable td.dataTables_empty {
 	text-align: center;
 }
 
-table.dataTable tr.odd { background-color: #E2E4FF; }
+table.dataTable tr.odd { background-color: #EEEEEA; }
 table.dataTable tr.even { background-color: white; }
 
 table.dataTable tr.odd td.sorting_1 { background-color: #D3D6FF; }
@@ -157,10 +158,19 @@ table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
 
 /* Full number pagination */
 .paging_full_numbers a:active {
-	outline: none
+	outline: none;
+	text-decoration: none;
+	border-color: #006699; 
+	color: #75B841; 
+	background: none; 
+	background-color:#3B8006;
 }
 .paging_full_numbers a:hover {
 	text-decoration: none;
+	border-color: #006699; 
+	color: #75B841; 
+	background: none; 
+	background-color:#3B8006;
 }
 
 .paging_full_numbers a.paginate_button,
@@ -173,7 +183,7 @@ table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
 	margin: 0 3px;
 	cursor: pointer;
 	*cursor: hand;
-	color: #333 !important;
+	color: #75B841 !important;
 }
 
 .paging_full_numbers a.paginate_button {

@@ -55,6 +55,22 @@ $(document).ready(function() {
         });
         // map.fitBounds(layer.getBounds());
         var selection = layer.feature.properties.DISTRICT.toLowerCase();
+
+         $.ajax({
+            url: location.protocol + "//" + location.host + "/search/map_ajax",
+            type: 'POST',
+            async: false,
+            dataType: 'html',
+            data: {district: selection},
+        })
+        .done(function(data) {
+            $('div#map.result').empty();
+            $('div#map-result').html(data);
+        })
+        .fail(function() {
+            console.log("error");
+        });
+
         $.ajax({
             url: location.protocol + "//" + location.host + "/search/json",
             type: 'POST',
@@ -67,24 +83,7 @@ $(document).ready(function() {
         .fail(function() {
             $('#column-chart').hide('slow');
         });
-
-        $.ajax({
-            url: location.protocol + "//" + location.host + "/search/map_ajax",
-            type: 'POST',
-            dataType: 'html',
-            data: {district: selection},
-        })
-        .done(function(data) {
-            $('div#map-result').html(data);
-        })
-        .fail(function() {
-            console.log("error");
-        })
-        .always(function() {
-            console.log("complete");
-        });
-        
-        
+           
 	}
 
     var closeTooltip;

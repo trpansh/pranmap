@@ -14,12 +14,12 @@
     			<div class="ribbon"></div> 
 				<div id="slider" class="nivoSlider">
 	    			<img src="assets/img/carousel-images/1.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
-	    			<img src="assets/img/carousel-images/2.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
-	    			<img src="assets/img/carousel-images/3.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
 	    			<img src="assets/img/carousel-images/4.jpg" alt="" title="Activities of PRAN" />
 	    			<img src="assets/img/carousel-images/5.jpg" alt="" title="Overview of Activities of PRAN on Bajhang District. Social Participation" />
-	    			<img src="assets/img/carousel-images/6.jpg" alt="" title="Overview of Activities of PRAN. Bootcamp" />
+	    			<img src="assets/img/carousel-images/2.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
+	    			<img src="assets/img/carousel-images/3.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
 	    			<img src="assets/img/carousel-images/7.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
+	    			<img src="assets/img/carousel-images/6.jpg" alt="" title="Overview of Activities of PRAN. Bootcamp" />
 				</div>
 			</div>
 		</div>

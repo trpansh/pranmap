@@ -50,13 +50,12 @@ header {
 
 #header-elements {
 	margin: auto;
-	max-width: 1249px;
+	max-width: 1024px;
 }
 
 #logo {
 
 	/*margin-left: 33px;*/
-	padding-left: 33px;
 	float: left;
 	width: 339px;
 	height: 100px;
@@ -68,7 +67,7 @@ header {
 nav {
 
 	float: right;
-	padding: 30px 30px 30px 0px;	
+	padding: 30px 0px 30px 0px;	
 	
 }
 
@@ -115,8 +114,8 @@ h1 {
 }
 
 h2 {
-	font-size: 1.25em;
-	line-height: 1.25em;
+	font-size: 1.3em;
+	line-height: 1.2em;
 	text-align: justify;
 }
 
@@ -135,27 +134,17 @@ section p {
 }
 
 .home, .about, .contact  {
-	max-width: 1249px;
+	max-width: 1024px;
 	padding: 40px 40px;
 	margin: auto;
 	min-height: 350px;
 }
 
-#loading {
-    width: 100%;
-    height: 100%;
-    background: url("../img/loading.gif") no-repeat center center #fff;
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0.6;
+.contact {
+	min-height: 369px;
 }
 
 #map {
-	margin-top: 2px;
 	height:450px;
 	width: 100%;
 	clear: both;
@@ -164,12 +153,9 @@ section p {
 }
 
 .search {
-	padding: 8px 40px 5px 40px;
-	margin-top: 452px;
+	overflow: hidden;
 	clear:both;
 	min-height:50px;
-	height: auto;
-	margin-bottom: 10px;
 	background-color:#fefce5;
 	border-top: 4px solid #f5b62b;
 	border-bottom: 4px solid #f5b62b;
@@ -177,19 +163,55 @@ section p {
 	-moz-box-shadow: outset 0 1px 3px rgba(0,0,0,0.8);
 	-webkit-box-shadow: outset 0 1px 3px rgba(0,0,0,0.8);
 	z-index: 100;
-	overflow: hidden;
 }
 
 #filters {
-	float: left;
-	clear: both;
+	float: right;
 	width:auto;
-	padding:5px 5px 5px 5px;
+	padding:0px 5px 5px 5px;
+
+}
+
+#filters p, #search-box p {
+	margin-bottom: 2px;
+	margin-left: 2px;
+}
+
+#filters select  {
+	padding:3px 30px 3px 3px;
+    /*margin: 0px 2px 0px 2px;*/
+    margin: 10px 2px 10px 2px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #7ac043, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #7ac043, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #7ac043, 0 -1px #fff inset;
+    background: #fefce5;
+    color:#01535e;
+    border:1px solid #7ac043 ;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    cursor:pointer;
+    width: 130px;
+    width: auto;
+    max-width: 150px;    
+    background-image: url('../img/icon-selectbox2.png');
+    background-position: 102% center;
+    background-repeat: no-repeat;
+    /*overflow: hidden;   
+   text-overflow: ellipsis;*/
+   white-space: nowrap;
+
+
+
 }
 
 #search-box {
-	/*padding:5px 0px 0px 5px;*/ /*when search is at buttom of filter*/
-	padding:0px 0px 0px 3px; /*when search is at top of filter*/
+	padding:0px;
 	float: left;
 }
 
@@ -216,23 +238,30 @@ section p {
     background-repeat: no-repeat;
     padding:3px 30px 3px 3px;
     overflow: hidden;   
-	text-overflow: ellipsis;
-	white-space: nowrap;
+   text-overflow: ellipsis;
+   white-space: nowrap;
 }
 
-#filters p, #search-box p {
-	margin-bottom: 2px;
-	margin-left: 2px;
-}
 
-#map-result {
-	font-size: 0.8em;
-	max-width: 1249px;
-	margin: auto;
+#data-table {
+
 }
 
 #report {
 
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    background: url("../img/loading.gif") no-repeat center center #fff;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
 }
 
 #about, #contact-detail{
@@ -253,13 +282,9 @@ section #contact-detail p{
 	padding-left:50px;
 }
 
-#about p {
+#about p, #description p {
 	font-size: 1em;
 }
-
-/*#description p {
-	font-size: 1.25em;
-}*/
 
 #contact-detail h1 {
 	padding: 4px;
@@ -275,9 +300,11 @@ section #contact-detail p{
 	margin: 5px 0px 0px 0px;
 }
 
-/*#carousel {
+#carousel {
 	height:auto;
-}*/
+	min-height: 100%;
+	overflow: hidden;
+}
 
 #description, footer {
 	width: 100%;
@@ -296,7 +323,7 @@ section #contact-detail p{
 
 #description p {
 	margin: auto;
-	max-width:1249px;
+	max-width:1024px;
 }
 
 .highlight {
@@ -306,7 +333,7 @@ section #contact-detail p{
 #goto  {
 	padding: 40px;
 	margin:auto;
-	max-width: 1249px;
+	max-width: 1024px;
 	height: 254px;
 	max-height: auto;
 
@@ -323,29 +350,24 @@ section #contact-detail p{
 }
 
 
-/* this is extra css yet to be implemented on home page 
-(Block) .custom-dropdown		= The main component
-(Element) .custom-dropdown__select	= Descendant of .custom-dropdown
-(Modifier) .custom-dropdown--*		= Different state of .custom-dropdown
-*/
-.custom-dropdown--large {
+/* this is extra css yet to be implemented on home page */
+.custom-dropdown-large {
 	font-size: 1.5em;
 }
 
-.custom-dropdown--small {
+.custom-dropdown-small {
 	font-size: .7em;
 }
 
-.custom-dropdown__select{
+.custom-dropdown-select{
 	font-size: inherit; /* inherit size from .custom-dropdown */
-	padding: .4em; /* add some space*/
+	padding: .5em; /* add some space*/
 	margin: 0; /* remove default margins */
 }
 
-.custom-dropdown__select--white {
+.custom-dropdown-select-green {
 	background-color: #fefce5;
-	color: #444;
-	border:1 px solid #75b841 ;    
+	color: #01535e    
 }
 
 @supports (pointer-events: none) and
@@ -357,26 +379,15 @@ section #contact-detail p{
 		position: relative;
 		display: inline-block;
 		vertical-align: middle;
-		
-
 	}
 
-	.custom-dropdown__select {
-		font-family: "Ubuntu","Cabin-regular","Proxima Nova",sans-serif ,"Open Sans","Myriad pro", Arial;
-		padding-right: 2.4em; /* accommodate with the pseudo elements for the dropdown arrow */
-		margin:0px -0.1em 0px 0px;
-		border: 1px solid #75b841 ;
+	.custom-dropdown-select {
+		padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+		border: 1px solid #75b841;
 		border-radius: 3px;
 		-webkit-appearance: none;
 		-moz-appearance: none;
-		appearance: none;
-		-webkit-border-radius:3px;
-	    -moz-border-radius:3px;
-	    -webkit-box-shadow: 0 2px 0 #7ac043, 0 -1px #fff inset;
-	    -moz-box-shadow: 0 2px 0 #7ac043, 0 -1px #fff inset;
-	    box-shadow: 0 2px 0 #7ac043, 0 -1px #fff inset;    
-		width:128px;
-		float: left;
+		appearance: none;    
 	}
 
 	.custom-dropdown::before,
@@ -401,32 +412,223 @@ section #contact-detail p{
 		border-radius: 0 3px 3px 0;
 	}
 
-	.custom-dropdown__select[disabled] {
+	.custom-dropdown-select[disabled] {
 		color: rgba(0,0,0,.3);
 	}
 
-	.custom-dropdown.custom-dropdown--disabled::after {
+	.custom-dropdown.custom-dropdown-disabled::after {
 		color: rgba(0,0,0,.1);
 	}
 
 	/* White dropdown style */
-	.custom-dropdown--white::before {
+	.custom-dropdown-green::before {
 		top: .5em; bottom: .5em;
-		background-color: #fefce5;
+		/*background-color: #fefce5;*/
 		border-left: 1px solid rgba(0,0,0,.1);
 	}
 
-	.custom-dropdown--white::after {
+	.custom-dropdown-green::after {
 		color: rgba(0,0,0,.9);
 	}
 
 	/* FF only temp fix */
 	@-moz-document url-prefix() {
-		.custom-dropdown__select { padding-right: .9em; margin-right: -0.1em }
-		.custom-dropdown--large .custom-dropdown__select { padding-right: 1.3em }
-		.custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+		.custom-dropdown-select 			 { padding-right: .9em }
+		.custom-dropdown-large .custom-dropdown-select { padding-right: 1.3em }
+		.custom-dropdown-small .custom-dropdown-select { padding-right: .5em }
 	}
 }
+
+.search {
+	padding: 5px 40px 10px 40px;
+	margin-top: 450px;
+	clear:both;
+	min-height:50px;
+	height:auto;
+	background-color:#fefce5;
+	border-top: 4px solid #f5b62b;
+	border-bottom: 4px solid #f5b62b;
+	box-shadow: outset 0 1px 3px rgba(0,0,0,0.8);
+	-moz-box-shadow: outset 0 1px 3px rgba(0,0,0,0.8);
+	-webkit-box-shadow: outset 0 1px 3px rgba(0,0,0,0.8);
+	z-index: 100;
+
+}
+
+#filters {
+	/*float: left;*/
+	clear: both;
+	width:auto;
+	padding:0px 5px 5px 5px;
+
+}
+
+#search-box {
+	padding:0px;
+	float: left;
+}
+
+#search {
+	margin: 0px 2px 0px 2px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+   /* -webkit-box-shadow: 0 3px 0 #7ac043, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #7ac043, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #7ac043, 0 -1px #fff inset;*/
+    background: #fefce5;
+    color:#01535e;
+    border:1px solid #7ac043 ;
+	
+	/*margin: 8px;*/
+	width: 172px;
+	height: 21px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('../img/icon-selectbox5.png');
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    padding:3px 30px 3px 3px;
+    overflow: hidden;   
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+
+/* this is extra css for further implementation on home page */
+.cd-dropdown,
+.cd-select {
+	position: relative;
+	width: 300px;
+	margin: 20px auto;
+	display: block;
+}
+
+.cd-dropdown > span {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	color: #999;
+	font-weight: 700;
+	font-size: 16px;
+	background: #fff;
+	display: block;
+	padding: 0 50px 0 30px;
+	position: relative;
+	cursor: pointer;
+}
+
+.cd-dropdown > span:after {
+	content: '\25BC';
+	position: absolute;
+	right: 0px;
+	top: 15%;
+	width: 50px;
+	text-align: center;
+	font-size: 12px;
+	padding: 10px;
+	height: 70%;
+	line-height: 24px;
+	border-left: 1px solid #ddd;
+}
+
+.cd-dropdown.cd-active > span:after {
+	content: '\25B2';
+}
+
+.cd-dropdown ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+}
+
+.cd-dropdown ul li {
+	display: block;
+}
+
+.cd-dropdown ul li span {
+	width: 100%;
+	background: #fff;
+	line-height: 60px;
+	padding: 0 30px 0 75px;
+	display: block;
+	color: #bcbcbc;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.cd-dropdown > span,
+.cd-dropdown ul li span {
+	-webkit-backface-visibility: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.cd-dropdown > span span[class^="icon-"],
+.cd-dropdown > span span[class*=" icon-"]{
+	padding: 0 30px 0 45px;
+}
+
+/* Select fallback styling */
+.cd-select {
+	border: 1px solid #ddd;
+}
+
+
+
+
+
+
+.cd-dropdown ul {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+.cd-dropdown > span,
+.cd-dropdown ul li {
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.cd-dropdown ul li {
+	position: absolute;
+	width: 100%;
+	pointer-events: none;
+}
+
+.cd-active.cd-dropdown > span {
+	color: #e66b20;
+}
+
+.cd-active.cd-dropdown ul li {
+	pointer-events: auto;
+}
+
+.cd-active.cd-dropdown ul li span {
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-ms-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+
+.cd-active.cd-dropdown ul li span:hover {
+	background: #e66b20;
+	color: #fff;
+}
+
+
+
+
+
+
 
 
 
@@ -478,11 +680,8 @@ section #contact-detail p{
 }
 */
 
-/*change*/
-.form-input, textarea {
-	/*change*/font-family: "Ubuntu","Cabin-regular","Proxima Nova",sans-serif ,"Open Sans","Myriad pro", Arial;
-	/*change*/font-size: 13.3333px;
 
+.form-input, textarea {
 	/*width:84%;*/
 	min-width: 90%;
 	width: auto;
@@ -499,6 +698,7 @@ section #contact-detail p{
 }
 
 textarea {
+	font: -webkit-small-control;
 	line-height: normal;
 	color: initial; 
 	height: 80px;
@@ -522,14 +722,17 @@ input#form-submit:hover, .button:hover, .go:hover {
 	opacity: 0.9;
 }
 
+/*input#form-submit {
+	float:left;
+}
+*/
 .button{
 	margin:auto;
 }
 
 .go {
-	/*margin:3px 2px 3px 2px;*/
 	border: none;
-	display: inline-block;
+	/*float: right;*/
 	padding: 5px 10px 5px 10px;
 	height: 29px;
 }
@@ -540,12 +743,11 @@ footer {
 	box-shadow: inset 0 1px 3px rgba(0,0,0,0.8);
 	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.8);
 	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.8);
-	margin-top: 10px;
 }
 
 footer p {
 	/*margin-left: 40px;*/
-	max-width: 1249px;
+	max-width: 1024px;
 	margin: auto;
 	/*height:100px;*/
 	font-size: 13px;
@@ -558,6 +760,28 @@ footer span#right {
 	float: right;
 }
 
+
+.error, .success {
+	margin-left: 2px;
+	text-align: right;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	border: 1px solid #D0D0D0;
+	float: left;
+}
+
+.success {
+	width: 395px;
+	background-color: #DFF2BF;
+	background-image: url('../img/success.png');
+}
+
+.error {
+	width: 180px;
+	background-color: #FF9494;
+	background-image: url('../img/error.png')
+}
 
 
 
@@ -623,14 +847,14 @@ font-size: 1.5em;
 }
 
 h2 {
-	/*font-size: 0.9em;*/
+	font-size: 0.9em;
 	/*line-height: 1.2em;*/
 	/*text-align: justify;*/
 }
 
 
 .home, .about, .contact  {
-	/*max-width: 1249px;*/
+	/*max-width: 1024px;*/
 	padding: 40px 20px;
 	/*margin: auto;*/
 	/*min-height: 475px;*/
@@ -675,7 +899,7 @@ h2 {
 #description p, #goto, #content-wrap  {
 	padding: 20px;
 	margin:auto;
-	/*max-width: 1249px;*/
+	/*max-width: 1024px;*/
 
 }
 
@@ -691,16 +915,9 @@ h2 {
 }
 
 
+
+
 }/*end of mediaquery max-width 1100 px*/
-
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width : 768px) {
 
@@ -766,14 +983,14 @@ font-size: 1.5em;
 }
 
 h2 {
-	/*font-size: 0.9em;*/
+	font-size: 0.9em;
 	/*line-height: 1.2em;*/
 	/*text-align: justify;*/
 }
 
 
 .home, .about, .contact  {
-	/*max-width: 1249px;*/
+	/*max-width: 1024px;*/
 	padding: 40px 20px;
 	/*margin: auto;*/
 	/*min-height: 475px;*/
@@ -818,7 +1035,7 @@ div#contact-form {
 #description p, #goto  {
 	padding: 20px;
 	margin:auto;
-	/*max-width: 1249px;*/
+	/*max-width: 1024px;*/
 
 }
 
@@ -888,4 +1105,4 @@ nav {
 
 
 
-} /*end of mediaquery max-width 480 px*/
+} /*end of mediaquery max-width 480 px
