@@ -15,41 +15,8 @@
 			<link rel="stylesheet" type="text/css" href="<?= site_url('assets/js/mapbox/mapbox.css'); ?>">
 		    <link rel="stylesheet" type="text/css" href="<?= site_url('assets/js/DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css'); ?>">
 		    <link rel="stylesheet" type="text/css" href="<?= site_url('assets/css/jquery-ui/jquery-ui.min.css'); ?>">
-		    <style type="text/css">
-		        #map { height: 450px; }
-
-		        .leaflet-popup-close-button {
-		            display: none;
-		        }
-
-		        .leaflet-popup-content-wrapper {
-		            pointer-events: none;
-		        }
-
-		        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-		            background: #FEFCE5;
-		        }
-
-		        .map-legend i {
-		            width: 18px;
-		            height: 18px;
-		            float: left;
-		            margin-right: 8px;
-		            opacity: 0.7;
-		        }
-
-		        #column-chart {
-		            width: 35%;
-		            height: auto;
-		        }
-
-		        .tg-table { border-collapse: collapse; border-spacing: 0; }
-		        .tg-table td, .tg-table th { background-color: #fff; border: 1px #aaa solid; color: #333; font-family: sans-serif; font-size: 100%; padding: 10px; vertical-align: top; }
-		        .tg-table .tg-even td  { background-color: #FCFBE3; }
-		        .tg-table th  { color: #222; font-size: 110%; font-weight: bold; }
-		        .tg-bf { font-weight: bold; }
-		        .tg-center { text-align: center; }
-		    </style>
+		    <link rel="stylesheet" type="text/css" href="<?= site_url('assets/css/alertify.default.css'); ?>">
+			<link rel="stylesheet" type="text/css" href="<?= site_url('assets/css/alertify.core.css'); ?>">
 		<?php } ?>
 		
 		<?php if ($this->uri->segment(1) == 'about') { ?>

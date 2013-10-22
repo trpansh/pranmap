@@ -175,38 +175,6 @@
             </span>
 
             <?php
-                $title = array(
-                    '' => 'Select Gender',
-                    'mr' => 'Male',
-                    'ms' => 'Female',
-                    'both' => 'Both'
-                );
-            ?>
-            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
-                <?php
-                    echo form_dropdown('title', $title,'',"class='custom-dropdown__select custom-dropdown__select--white'");
-                ?>
-            </span>
-
-            <?php
-                $ethnicity = array(
-                    '' => 'Select Ethnicity',
-                    'brahmin' => 'Brahmin',
-                    'chhetri' => 'Chhetri',
-                    'dalit' => 'Dalit',
-                    'janajati' => 'Janajati',
-                    'madhesi' => 'Madhesi',
-                    'muslim' => 'Muslim',
-                    'tharu' => 'Tharu'
-                );
-            ?>
-            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
-                <?php
-                    echo form_dropdown('ethnicity', $ethnicity,'',"class='custom-dropdown__select custom-dropdown__select--white'");
-                ?>
-            </span>
-
-            <?php
                 $sector = array(
                     '' => 'Select Sector',
                     'agriculture' => 'Agriculture',
@@ -262,6 +230,38 @@
             </span>
 
             <?php
+                $title = array(
+                    '' => 'Select Gender',
+                    'mr' => 'Male',
+                    'ms' => 'Female',
+                    'both' => 'Both'
+                );
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('title', $title,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
+
+            <?php
+                $ethnicity = array(
+                    '' => 'Select Ethnicity',
+                    'brahmin' => 'Brahmin',
+                    'chhetri' => 'Chhetri',
+                    'dalit' => 'Dalit',
+                    'janajati' => 'Janajati',
+                    'madhesi' => 'Madhesi',
+                    'muslim' => 'Muslim',
+                    'tharu' => 'Tharu'
+                );
+            ?>
+            <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
+                <?php
+                    echo form_dropdown('ethnicity', $ethnicity,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                ?>
+            </span>
+
+            <?php
                 $status = array(
                         '' => 'Select Status',
                         'ongoing' => 'Ongoing',
@@ -285,6 +285,11 @@
     <div id="map-result">
         <?php if(isset($subview)) $this->load->view($subview); ?>
     </div>
-    <div id="column-chart"></div>
+    <div id="report">
+        <div id="report-detail">
+            
+        </div>
+        <div id="column-chart"></div>
+    </div>
 
 <?php $this->load->view('include/footer'); ?>

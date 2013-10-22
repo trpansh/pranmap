@@ -4,7 +4,7 @@ $(document).ready(function() {
         minZoom: 6,
         maxZoom: 10,
         inertia: true
-    }).setView([28.4, 84.94], 7);
+    }).setView([28.4, 84.14], 7);
 
     var popup = new L.Popup({ autoPan: false, minWidth: 110 });
     var legend = L.mapbox.legendControl({ position: 'topright' }).addLegend(getLegendHTML()).addTo(map);
@@ -57,7 +57,7 @@ $(document).ready(function() {
         var selection = layer.feature.properties.DISTRICT.toLowerCase();
 
          $.ajax({
-            url: location.protocol + "//" + location.host + "/search/map_ajax",
+            url: location.protocol + "//" + location.host + "/PRAN/search/map_ajax",
             type: 'POST',
             async: false,
             dataType: 'html',
@@ -66,13 +66,11 @@ $(document).ready(function() {
         .done(function(data) {
             $('div#map.result').empty();
             $('div#map-result').html(data);
-        })
-        .fail(function() {
-            console.log("error");
+            $.scrollTo('div#map-result', 1000);
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/search/json",
+            url: location.protocol + "//" + location.host + "/PRAN/search/json",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
@@ -81,7 +79,9 @@ $(document).ready(function() {
             columnChart(json, selection);
         })
         .fail(function() {
-            $('#column-chart').hide('slow');
+            alertify.set({ delay: 1000 });
+            alertify.error("No Results Found!");
+             $('#report').hide('slow');
         });
            
 	}

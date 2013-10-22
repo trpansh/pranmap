@@ -15,6 +15,7 @@
 		</section>
 
 		<div id="contact-form">
+			<br><br>
 			<form action="" method="post">  
 	                <!-- <label for="name">Name:</label><br/> -->
 	                <input class="form-input" type="text" name="name" required placeholder="Name*"/>

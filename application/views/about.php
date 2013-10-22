@@ -13,13 +13,14 @@
 			<div class="slider-wrapper theme-default"> 
     			<div class="ribbon"></div> 
 				<div id="slider" class="nivoSlider">
-	    			<img src="assets/img/carousel-images/1.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
-	    			<img src="assets/img/carousel-images/4.JPG" alt="" title="Activities of PRAN" />
-	    			<img src="assets/img/carousel-images/5.JPG" alt="" title="Overview of Activities of PRAN on Bajhang District. Social Participation" />
-	    			<img src="assets/img/carousel-images/2.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
-	    			<img src="assets/img/carousel-images/3.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
-	    			<img src="assets/img/carousel-images/7.jpg" alt="" title="Overview of Activities of PRAN. Social Participation" />
-	    			<img src="assets/img/carousel-images/6.jpg" alt="" title="Overview of Activities of PRAN. Bootcamp" />
+	    			<img src="assets/img/carousel-images/1.jpg" alt="" />
+	    			<img src="assets/img/carousel-images/2.jpg" alt="" />
+	    			<img src="assets/img/carousel-images/3.jpg" alt="" />
+	    			<img src="assets/img/carousel-images/4.JPG" alt="" />
+	    			<img src="assets/img/carousel-images/5.JPG" alt="" />
+	    			<img src="assets/img/carousel-images/6.jpg" alt="" />
+	    			<img src="assets/img/carousel-images/7.jpg" alt="" />
+	    			<img src="assets/img/carousel-images/8.jpg" alt="" />
 				</div>
 			</div>
 		</div>
@@ -28,7 +29,7 @@
 
 	<section id="description">
 		<p>PRAN helps address social accountability by enhancing the ability of citizens, 
-		civil society organizations, and other non-state actors to hold the state accountable and that also enhance the capacity of the state to become more transparent, accountable, and responsive to the needs and demands of citizens.</p><br><p> Over the past decade an impressive array of social accountability approaches and tools has evolved globally. These practices have been well honed in countries where they are widely implemented and have become powerful instruments to underpin <span class="highlight">“demand for good governance”</span>.</p>
+		civil society organizations, and other non-state actors to hold the state accountable and that also enhance the capacity of the state to become more transparent, accountable, and responsive to the needs and demands of citizens.</p><br><p> Over the past decade an impressive array of social accountability approaches and tools have evolved globally. These practices have been well honed in countries where they are widely implemented and have become powerful instruments to underpin <span class="highlight">“demand for good governance”</span>.</p>
 	</section>
 
 	<div id="goto">
