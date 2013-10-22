@@ -57,7 +57,7 @@ $(document).ready(function() {
         var selection = layer.feature.properties.DISTRICT.toLowerCase();
 
          $.ajax({
-            url: location.protocol + "//" + location.host + "/PRAN/search/map_ajax",
+            url: location.protocol + "//" + location.host + "/search/map_ajax",
             type: 'POST',
             async: false,
             dataType: 'html',
@@ -70,7 +70,7 @@ $(document).ready(function() {
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/PRAN/search/json",
+            url: location.protocol + "//" + location.host + "/search/json",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
@@ -81,7 +81,7 @@ $(document).ready(function() {
         .fail(function() {
             alertify.set({ delay: 1000 });
             alertify.error("No Results Found!");
-             $('#report').hide('slow');
+             $('#column-chart').hide('slow');
         });
            
 	}
