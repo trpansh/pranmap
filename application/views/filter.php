@@ -61,12 +61,15 @@
             // Data Tables
             var oTable = $('#result').dataTable({
                 "sScrollX": "100%",
-                "sScrollXInner": "200%",
+                //"sScrollXInner": "10%",
                 "bScrollCollapse": true,
                 "bJQueryUI": true,
                 "bAutoWidth": false,
-                "sPaginationType": "full_numbers",
-                "bDestroy": true
+                "iDisplayLength": 5,
+                "aLengthMenu": [5, 10, 15, 25, 50, 100],
+                "bDestroy": true,
+                "sPaginationType": "full_numbers"
+
             });
         });
     </script>

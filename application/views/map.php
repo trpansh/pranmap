@@ -130,42 +130,41 @@
             <?php
                 $tools = array(
                         '' => 'Select Tool',
-                        'citizen charter' => 'Citizen Charter',
-                        'checklist of entitlements' => 'Checklist of Entitlements',
-                        'budgets of local bodies' => 'Budgets of Local Bodies',
+                        'analysis of national budgets' => 'Analysis of National Budgets',
                         'budget demystification and outreach' => 'Budget Demystification and Outreach',
-                        'right to information' => 'Right to Information',
-                        'checklist of law and rules' => 'Checklist of Law and Rules',
-                        'civic education' => 'Civic Education',
-                        'public expenditure tracking' => 'Public Expenditure Tracking',
-                        'check list of standards & indicators' => 'Check list of Standards & Indicators',
-                        'community score card' => 'Community Score Card',
-                        'citizen report card' => 'Citizen Report Card',
-                        'public hearing' => 'Public Hearing',
-                        'public audit' => 'Public Audit',
-                        'public revenue monitoring' => 'Public Revenue Monitoring',
-                        'public help desk' => 'Public Help Desk',
-                        'policy appraisal' => 'Policy Appraisal',
-                        'social security allowance fund' => 'Social Security Allowance Fund',
-                        'identified sector for pets' => 'Identified Sector for PETS',
                         'budget work' => 'Budget Work',
-                        'independent budget analysis' => 'Independent Budget Anlaysis',
+                        //'budgets of local bodies' => 'Budgets of Local Bodies',
+                        'checklist of entitlements' => 'Checklist of Entitlements',
+                        'checklist of law and rules' => 'Checklist of Law and Rules',
+                        // 'checklist of standards & indicators' => 'Checklist of Standards & Indicators',
+                        'citizen charter' => 'Citizen Charter',
                         'citizen complaint structures' => 'Citizen Complaint Structures',
-                        'tracking of public services' => 'Tracking of Public Services',
-                        'zero corruption campaign' => 'Zero Corruption Campaign',
+                        'citizen report card' => 'Citizen Report Card',
                         'citizen watch group' => 'Citizen Watch Group',
                         'citizen jury' => 'Citizen Jury',
-                        'civic education' => 'Civic Education',
-                        'analysis of national budgets' => 'Analysis of National Budgets',
-                        'public grievance redressal mechanism' => 'Public Grievance Redressal Mechanism',
-                        'multi-stakeholder groups' => 'Multi-stakeholder Groups',
-                        'participatory planning' => 'Participatory Planning',
+                        'civic education' => 'Civic Education',                        
+                        // 'community led procurement' => 'Community Led Procurement',
+                        'community score card' => 'Community Score Card',
+                        // 'declaration of assets' => 'Declaration of Assets',
+                        'identified sector for pets' => 'Identified Sector for PETS',
+                        'independent budget analysis' => 'Independent Budget Anlaysis',
+                        // 'integrity pact' => 'Integrity Pact',
+                        // 'multi-stakeholder groups' => 'Multi-stakeholder Groups',
                         'participatory budgeting' => 'Participatory Budgeting',
                         'participatory national model budget' => 'Participatory National Model Budget',
-                        'community led procurement' => 'Community Led Procurement',
-                        'declaration of assets' => 'Declaration of Assets',
-                        'understanding conflict of interest' => 'Understanding Conflict of Interest',
-                        'integrity pact' => 'Integrity Pact'
+                        'participatory planning' => 'Participatory Planning',
+                        'public audit' => 'Public Audit',
+                        'public expenditure tracking' => 'Public Expenditure Tracking',
+                        'public grievance redressal mechanism' => 'Public Grievance Redressal Mechanism',
+                        'public hearing' => 'Public Hearing',
+                        'public help desk' => 'Public Help Desk',
+                        'public revenue monitoring' => 'Public Revenue Monitoring',
+                        'policy appraisal' => 'Policy Appraisal',
+                        'right to information' => 'Right to Information',
+                        'social security allowance fund' => 'Social Security Allowance Fund',
+                        'tracking of public services' => 'Tracking of Public Services',
+                        // 'understanding conflict of interest' => 'Understanding Conflict of Interest',
+                        'zero corruption campaign' => 'Zero Corruption Campaign'
                     );
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
@@ -286,10 +285,8 @@
         <?php if(isset($subview)) $this->load->view($subview); ?>
     </div>
     <div id="report">
-        <div id="report-detail">
-            
-        </div>
         <div id="column-chart"></div>
+        <div id="pie-chart"></div> 
     </div>
 
 <?php $this->load->view('include/footer'); ?>

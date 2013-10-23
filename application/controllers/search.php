@@ -22,8 +22,8 @@
 			}
 		}
 
-		function json() {
-			if ($this->input->is_ajax_request() || $this->input->post()) {
+		function column_chart() {
+			if ($this->input->is_ajax_request()) {
 				$district = $this->input->post('district');
 
 				if ($district != FALSE) {
@@ -63,6 +63,47 @@
 				redirect('map');
 			}
 
+		}
+
+		function pie_chart() {
+			if ($this->input->is_ajax_request()) {
+			 	$district = $this->input->post('district');
+				// $district = 'kapilvastu';
+				if ($district != FALSE) {
+					$sector_array = array();
+					$sector_trim = array();
+					$data = $this->search_m->filter(FALSE, FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE, FALSE);
+					foreach ($data as $value) {
+						foreach ($value->result() as $output) {
+							$result[] = $output;
+						}
+					}
+
+					if (isset($result)) {
+						foreach ($result as $value) {
+							if (preg_match("*SAP*", $value->Designation) || preg_match("*SA Practitioner*", $value->Designation)) {
+								array_push($sector_array, $value->Sector);
+							}
+						}
+						foreach ($sector_array as $value) {
+							$array = array_map("trim",explode(",", $value));
+							foreach ($array as $key => $value) {
+								array_push($sector_trim, $value);
+							}
+						}
+						$sector_count = array_count_values($sector_trim);
+						$json = array();
+						foreach ($sector_count as $key => $value) {
+							$temp[0] = $key;
+							$temp[1] = $value;
+							array_push($json, $temp);
+						}
+						echo json_encode($json);
+					}
+				} 
+			} else {
+				redirect('map');
+			}
 		}
 
 		private function _create_json() {

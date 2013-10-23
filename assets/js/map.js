@@ -7,6 +7,7 @@ $(document).ready(function() {
     }).setView([28.4, 84.14], 7);
 
     var popup = new L.Popup({ autoPan: false, minWidth: 110 });
+    var message = L.mapbox.legendControl({ position: 'topright' }).addLegend(getMessageHTML()).addTo(map);
     var legend = L.mapbox.legendControl({ position: 'topright' }).addLegend(getLegendHTML()).addTo(map);
     map.attributionControl.addAttribution("PRAN &copy; 2013");
 
@@ -64,24 +65,39 @@ $(document).ready(function() {
             data: {district: selection},
         })
         .done(function(data) {
-            $('div#map.result').empty();
+            $('div#map-result').empty();
             $('div#map-result').html(data);
             $.scrollTo('div#map-result', 1000);
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/search/json",
+            url: location.protocol + "//" + location.host + "/search/column_chart",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
         })
         .done(function(json) {
+            alertify.set({ delay: 1000 });
+            alertify.success("Results Found!");
             columnChart(json, selection);
         })
         .fail(function() {
             alertify.set({ delay: 1000 });
             alertify.error("No Results Found!");
-             $('#column-chart').hide('slow');
+            $('#column-chart').hide('slow');
+        });
+
+        $.ajax({
+            url: location.protocol + "//" + location.host + "/search/pie_chart",
+            type: 'POST',
+            dataType: 'json',
+            data: {district: selection},
+        })
+        .done(function(json) {
+            pieChart(json, selection);
+        })
+        .fail(function() {
+            $('#pie-chart').hide('slow');
         });
            
 	}
@@ -149,7 +165,11 @@ $(document).ready(function() {
             );
         }
 
-        return "<span><b>Total CSO's</b></span><br /><br />" + labels.join('<br />');
+        return "<span><b><u>Total CSO's</u></b></span><br><br>" + labels.join('<br>');
+    }
+
+    function getMessageHTML() {
+        return "<b style='font-size: 14px'>Click on a district.</b>";
     }
 
     var nepalLayer = L.geoJson(nepalDistrict, {
@@ -174,7 +194,7 @@ $(document).ready(function() {
                 type: 'column'
             },
             title: {
-                text: 'In <b>' + selection[0].toUpperCase() + selection.substring(1) + '</b> District'
+                text: "<b>Total CSO's:</b> In <b>" + selection[0].toUpperCase() + selection.substring(1) + "</b> District"
             },
             subtitle: {
                 text: ''
@@ -207,6 +227,40 @@ $(document).ready(function() {
             series: [{
                 data: json,
                 colorByPoint: true
+            }]
+        });
+    }
+
+    function pieChart(json, selection) {
+        $('#pie-chart').slideDown('slow');
+        $('#pie-chart').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: '<b>Identified Sectors:</b> In ' + '<b>' + selection[0].toUpperCase() + selection.substring(1) + '</b>'
+            },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: '',
+                data: json
             }]
         });
     }

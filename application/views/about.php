@@ -13,14 +13,14 @@
 			<div class="slider-wrapper theme-default"> 
     			<div class="ribbon"></div> 
 				<div id="slider" class="nivoSlider">
-	    			<img src="assets/img/carousel-images/1.jpg" alt="" />
-	    			<img src="assets/img/carousel-images/2.jpg" alt="" />
-	    			<img src="assets/img/carousel-images/3.jpg" alt="" />
-	    			<img src="assets/img/carousel-images/4.JPG" alt="" />
-	    			<img src="assets/img/carousel-images/5.JPG" alt="" />
-	    			<img src="assets/img/carousel-images/6.jpg" alt="" />
-	    			<img src="assets/img/carousel-images/7.jpg" alt="" />
-	    			<img src="assets/img/carousel-images/8.jpg" alt="" />
+	    			<img src="assets/img/carousel-images/1.jpg" alt="1" />
+	    			<img src="assets/img/carousel-images/2.jpg" alt="2" />
+	    			<img src="assets/img/carousel-images/3.jpg" alt="3" />
+	    			<img src="assets/img/carousel-images/4.JPG" alt="4" />
+	    			<img src="assets/img/carousel-images/5.JPG" alt="5" />
+	    			<img src="assets/img/carousel-images/6.jpg" alt="6" />
+	    			<img src="assets/img/carousel-images/7.jpg" alt="7" />
+	    			<img src="assets/img/carousel-images/8.jpg" alt="8" />
 				</div>
 			</div>
 		</div>
@@ -34,7 +34,7 @@
 
 	<div id="goto">
 		<div id="broucher">
-			<img src="assets/img/icon-broucher.png" title="Download Brochure" alt="Download Brochure" style="height:150px; width:150px;"><br><br><p>Know more about PRAN.</p><a href="<?php echo site_url('about/download/PranBrochure.pdf'); ?>"><input class="button" name="download broucher" type="button" value="Download Brochure"></a>
+			<img src="assets/img/icon-broucher.png" title="Download Brochure" alt="Download Brochure" style="height:150px; width:150px;"><br><br><p>Know more about PRAN.</p><a href="<?php echo site_url('about/download'); ?>"><input class="button" name="download broucher" type="button" value="Download Brochure"></a>
 		</div>
 		<div id="viewmap">
 			<img src="assets/img/icon-map.png" title="View Map" alt="View Map" style="height:150px; width:150px;"><br><br><p>For better insights on PRAN activities.</p><a href="<?php echo site_url('map'); ?>"><input class="button" name="viewmap" type="button" value="View Map"></a>

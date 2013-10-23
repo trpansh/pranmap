@@ -13,11 +13,15 @@
 					// Email SMTP
 					$config = array(
 								'protocol' => 'smtp',
-								'smtp_host' => 'smtp.wlink.com.np',
+								'smtp_host' => 'ssl://smtp.gmail.com',
+								'smtp_port' => 465,
+								'smtp_timeout' => 7,
+								'smtp_user' => 'pranmap@gmail.com',
+								'smtp_pass' => 'pranmap12345',
 								'wordwrap' => TRUE,
 								'wrapchars' => 95,
 								'mailtype' => 'text',
-								'charset' => 'utf-8',
+								'charset' => 'iso-8859-1',
 								'validate' => TRUE,
 								'crlf' => "\r\n",
 								'newline' => "\r\n"
@@ -31,17 +35,21 @@
 					$message = $this->input->post('message');
 
 					$this->email->from($email, $name);
-					$this->email->to('acharya_saugat@hotmail.com');
-					$this->email->subject('PRAN Map Contact Message');
+					$this->email->to('pran@worldbank.org');
+					$this->email->subject('Message from pranmap.org');
 					$this->email->message($message);	
 
-					$this->email->send();
-
-					$data['success'] = 'Your message has been recieved.';
+					if($this->email->send()) {
+						$data['success'] = 'Your message has been recieved.';
+					}
+					else {
+						show_error($this->email->print_debugger());
+					}
 				} else {
 					$data['error'] = 'Not a valid email.';
 				}
-			} 
+			}
+
 			$data['title'] = 'Contact - Program for Accountability in Nepal';
 			$this->load->view('contact', $data);
 			

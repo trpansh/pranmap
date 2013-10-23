@@ -4,9 +4,8 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title><?php if(isset($title)) { echo $title; } else { echo "Program for Accountability in Nepal"; }?></title>
-		<meta name="description" content="Responsive Header Nav">
-		<meta name="author" content="">
+		<title><?php if(isset($title)) { echo $title; } else { echo "Program for Accountability in Nepal"; } ?></title>
+		<meta name="description" content="PRAN">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<script src="assets/js/jquery-2.0.3.min.js"></script>
