@@ -34,7 +34,7 @@
 		<?php } ?>
 
 		<link rel="stylesheet" href="<?= site_url('assets/css/styles.css'); ?>">
-		<link rel="shortcut icon" href="<?= site_url('assets/img/favicon-pran.ico'); ?>" type="image/png">
+		<link rel="shortcut icon" href="<?= site_url('assets/img/favicon-pran.png'); ?>" type="image/png">
 
 		<!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
