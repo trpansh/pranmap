@@ -45,7 +45,7 @@
 			<nav>
 				<a href="#" id="menu-icon"></a>
 				<ul>
-					<li><a href="<?= site_url(); ?>" class="<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') echo 'current'; ?>">Home</a></li>
+					<li><a href="<?= site_url(); ?>" class="<?php if($this->uri->rsegments[1] == 'map') echo 'current'; ?>">Home</a></li>
 					<li><a href="<?= site_url('about'); ?>" class="<?php if($this->uri->segment(1) == 'about') echo 'current'; ?>">About</a></li>
 					<li><a href="<?= site_url('contact'); ?>" class="<?php if($this->uri->segment(1) == 'contact') echo 'current'; ?>">Contact</a></li>
 				</ul>
