@@ -19,7 +19,7 @@
 				$funding = ($this->input->post('funding') === '') ? FALSE : $this->input->post('funding');
 				$status = ($this->input->post('status') === '') ? FALSE : $this->input->post('status');
 				if ($batch == FALSE && $tool == FALSE && $title == FALSE && $district == FALSE && $sector == FALSE && $theme == FALSE && $funding == FALSE && $ethnicity == FALSE && $status == FALSE) {
-					$data['error'] = 'No filter selected.';
+					$data['error'] = 'No Filter Selected!';
 				} else {
 					$data = $this->search_m->filter($batch, $tool, $title, $district, $sector, $theme, $funding, $ethnicity, $status);
 					foreach ($data as $value) {
@@ -29,7 +29,6 @@
 					}
 				}
 				$data['subview'] = 'filter';
-				$data['error'] = 'No Filter Selected!';
 				$this->load->view('map', $data);
 			} else {
 				redirect('map');

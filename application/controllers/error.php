@@ -5,7 +5,8 @@
 		}
 
 		function index() {
-			$this->load->view('error');
+			$data['title'] = '404 - Program for Accountability in Nepal';
+			$this->load->view('error', $data);
 		}
 	}
 ?>
