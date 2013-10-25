@@ -43,6 +43,7 @@ $(document).ready(function() {
     
     function onEachFeature(feature, layer) {
 		layer.on({
+            preclick: removeFeature,
 			click: clickFeature,
 			mousemove: popupFeature,
 			mouseout: resetPopup
@@ -103,6 +104,10 @@ $(document).ready(function() {
         });
         
 	}
+
+    function removeFeature(e) {
+        nepalLayer.resetStyle(e.target);
+    }
 
     var closeTooltip;
 
