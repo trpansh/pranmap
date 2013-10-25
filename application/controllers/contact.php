@@ -6,9 +6,25 @@
 
 		function index() {
 			if ($this->input->post()) {
-				// Email Validation
 				$this->load->library('form_validation');
-				$this->form_validation->set_rules('email', 'Email', 'trim|xss_clean|required|valid_email');				
+				$config = array(
+	               array(
+	                     'field'   => 'email', 
+	                     'label'   => 'Email', 
+	                     'rules'   => 'trim|xss_clean|valid_email|required'
+	                  ),
+	               array(
+	                     'field'   => 'name', 
+	                     'label'   => 'Name', 
+	                     'rules'   => 'required|xss_clean'
+	                  ),
+	               array(
+	                     'field'   => 'message', 
+	                     'label'   => 'Message', 
+	                     'rules'   => 'required|xss_clean'
+	                  )
+	            );
+	            $this->form_validation->set_rules($config);			
 				if ($this->form_validation->run() == TRUE) {
 					// Email SMTP
 					$config = array(
@@ -36,17 +52,17 @@
 
 					$this->email->from($email, $name);
 					$this->email->to('pran@worldbank.org');
-					$this->email->subject('Message from pranmap.org');
+					$this->email->subject('Message from pranmap.org.np');
 					$this->email->message($message);	
 
 					if($this->email->send()) {
 						$data['success'] = 'Your message has been recieved.';
 					}
-					else {
-						show_error($this->email->print_debugger());
-					}
+					// else {
+					// 	show_error($this->email->print_debugger());
+					// }
 				} else {
-					$data['error'] = 'Not a valid email.';
+					$data['error'] = 'Invalid credentials.';
 				}
 			}
 

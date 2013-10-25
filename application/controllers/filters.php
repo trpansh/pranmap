@@ -29,6 +29,7 @@
 					}
 				}
 				$data['subview'] = 'filter';
+				$data['error'] = 'No Filter Selected!';
 				$this->load->view('map', $data);
 			} else {
 				redirect('map');

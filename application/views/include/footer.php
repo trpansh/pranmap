@@ -21,7 +21,7 @@
 		<?php } ?>
 		
 		<?php if($this->uri->segment(1) == 'about') { ?>
-			<script src="assets/js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+			<script src="<?= site_url('assets/js/nivo-slider/jquery.nivo.slider.pack.js') ?>"></script>
 		<?php } ?>
 	</body>
 

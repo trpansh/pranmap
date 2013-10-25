@@ -1,27 +1,29 @@
 <?php $this->load->view('include/header'); ?>
 	<div id="loading"></div>
     <div id="map"></div>
-    <div class="search">
+    <div class="search" id="output">
         <div id="search-box">
             <?php 
-                echo form_open('search');
+                echo form_open('search#output');
                 $data = array(
                         'name' => 'search',
                         'id' => 'search',
-                        'size' => 40,
                         'maxlength' => 100,
                         'placeholder' => 'Search for District, Organization, Person, Tool',
                         'pattern' => '.{3,}',
-                        'oninvalid' => "setCustomValidity('Minimum 3 letters or numbers.')",
-                        'oninput' => "setCustomValidity('')"
+                        'oninvalid' => "setCustomValidity('Minimum 3 characters.')",
+                        'oninput' => "setCustomValidity('')",
+                        'required' => 'required',
+                        'value' => set_value('search')
                     );
                 echo form_input($data);
+                echo form_submit('search-submit', '', 'id="search-submit"');
                 echo form_close(); 
             ?>
         </div>
         <div id="filters">
             <?php 
-                echo form_open('filters');
+                echo form_open('filters#output');
                 
                 $batch = array(
                         '' => 'Select Batch',
@@ -37,7 +39,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
                 <?php               
-                    echo form_dropdown('batch', $batch ,'',"class='custom-dropdown__select custom-dropdown__select--white'" );
+                    echo form_dropdown('batch', $batch, set_value('batch', 'batch'), "class='custom-dropdown__select custom-dropdown__select--white'" );
                 ?>
             </span>
 
@@ -123,7 +125,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
                 <?php
-                    echo form_dropdown('district', $district,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                    echo form_dropdown('district', $district, set_value('district', 'district'), "class='custom-dropdown__select custom-dropdown__select--white'");
                 ?>
             </span>
 
@@ -169,7 +171,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
                 <?php
-                    echo form_dropdown('tool', $tools,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                    echo form_dropdown('tool', $tools, set_value('tool', 'tool'), "class='custom-dropdown__select custom-dropdown__select--white'");
                 ?>
             </span>
 
@@ -195,7 +197,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
                 <?php
-                    echo form_dropdown('sector', $sector,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                    echo form_dropdown('sector', $sector, set_value('sector', 'sector'), "class='custom-dropdown__select custom-dropdown__select--white'");
                 ?>
             </span>
             
@@ -210,7 +212,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
                 <?php
-                    echo form_dropdown('theme', $theme,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                    echo form_dropdown('theme', $theme, set_value('theme', 'theme'), "class='custom-dropdown__select custom-dropdown__select--white'");
                 ?>
             </span>
 
@@ -224,7 +226,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">   
                 <?php
-                    echo form_dropdown('funding', $funding,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                    echo form_dropdown('funding', $funding, set_value('funding', 'funding'), "class='custom-dropdown__select custom-dropdown__select--white'");
                 ?>
             </span>
 
@@ -238,7 +240,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
                 <?php
-                    echo form_dropdown('title', $title,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                    echo form_dropdown('title', $title, set_value('title', 'title'), "class='custom-dropdown__select custom-dropdown__select--white'");
                 ?>
             </span>
 
@@ -256,7 +258,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
                 <?php
-                    echo form_dropdown('ethnicity', $ethnicity,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                    echo form_dropdown('ethnicity', $ethnicity, set_value('ethnicity', 'ethnicity'), "class='custom-dropdown__select custom-dropdown__select--white'");
                 ?>
             </span>
 
@@ -270,7 +272,7 @@
             ?>
             <span class="custom-dropdown custom-dropdown--white custom-dropdown--small">
                 <?php
-                    echo form_dropdown('status', $status,'',"class='custom-dropdown__select custom-dropdown__select--white'");
+                    echo form_dropdown('status', $status, set_value('status', 'status'), "class='custom-dropdown__select custom-dropdown__select--white'");
                 ?>
             </span>
 

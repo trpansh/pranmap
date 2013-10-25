@@ -183,9 +183,9 @@ section p {
 	background-color:#fefce5;
 	border-top: 4px solid #f5b62b;
 	border-bottom: 4px solid #f5b62b;
-	box-shadow: outset 0 1px 3px rgba(0,0,0,0.8);
-	-moz-box-shadow: outset 0 1px 3px rgba(0,0,0,0.8);
-	-webkit-box-shadow: outset 0 1px 3px rgba(0,0,0,0.8);
+	box-shadow:inset 0px 11px 8px -10px #ddd,inset 0px -11px 8px -10px #ddd;
+    -webkit-box-shadow: inset 0px 11px 8px -10px #ddd,inset 0px -11px 8px -10px #ddd;
+    -moz-box-shadow: inset 0px 11px 8px -10px #ddd,inset 0px -11px 8px -10px #ddd;
 	z-index: 100;
 	overflow: hidden;
 }
@@ -210,18 +210,34 @@ section p {
     background: #fefce5;
     color:#01535e;
     border:1px solid #7ac043 ;
-	width: 300px;
+	width: 283px;
 	height: 21px;
 	-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url('../img/icon-search.png');
-    background-position: 100% center;
-    background-repeat: no-repeat;
-    padding:3px 30px 3px 3px;
+    padding:3px 3px 3px 3px;
     overflow: hidden;   
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+#search-submit { 
+	padding:5px;
+	margin:auto;
+	vertical-align: top;
+	color: #fefce5;
+	font-weight: bold;
+	background: #7bc145;
+	border: none;
+	cursor: pointer;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-image: url('../img/pran-search-icon.png');
+    background-position: 0% center;
+    background-repeat: no-repeat;
+    width:32px;
+    -moz-outline:0 none;
+	outline:0 none;
 }
 
 #filters p, #search-box p {
@@ -466,9 +482,11 @@ input#form-submit,.button,.go {
 	cursor: pointer;
 	border: 1px solid #fff;
 	border-radius: 5px;
+	-moz-outline:0 none;
+	outline:0 none;
 }
 
-input#form-submit:hover, .button:hover, .go:hover {
+#search-submit:hover, input#form-submit:hover, .button:hover, .go:hover {
 	opacity: 0.9;
 }
 
@@ -480,7 +498,7 @@ input#form-submit:hover, .button:hover, .go:hover {
 	display: inline-block;
 	padding: 5px 10px 5px 10px;
 	height: 29px;
-	width: 70px;
+	width: 90px;
 }
 
 footer {
@@ -525,7 +543,7 @@ footer p {
 }
 
 .error {
-	width: 180px;
+	width: 190px;
 	background-color: #FF9494;
 	background-image: url('../img/error.png')
 }
@@ -743,6 +761,10 @@ h1 {
 
 	#search {
 		width:235px;
+	}
+
+	#search-box {
+		margin-top: 10px;
 	}
 
 	#filters {

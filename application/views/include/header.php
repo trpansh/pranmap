@@ -8,7 +8,7 @@
 		<meta name="description" content="PRAN">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<script src="assets/js/jquery-2.0.3.min.js"></script>
+		<script src="<?= site_url('assets/js/jquery-2.0.3.min.js') ?>"></script>
 		
 		<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') { ?>
 			<link rel="stylesheet" type="text/css" href="<?= site_url('assets/js/mapbox/mapbox.css'); ?>">
@@ -19,8 +19,8 @@
 		<?php } ?>
 		
 		<?php if ($this->uri->segment(1) == 'about') { ?>
-			<link rel="stylesheet" href="assets/js/nivo-slider/nivo-slider.css" type="text/css" />
-			<link rel="stylesheet" href="assets/js/nivo-slider/themes/default/default.css" type="text/css" />
+			<link rel="stylesheet" href="<?= site_url('assets/js/nivo-slider/nivo-slider.css'); ?>" type="text/css" />
+			<link rel="stylesheet" href="<?= site_url('assets/js/nivo-slider/themes/default/default.css'); ?>" type="text/css" />
 			<script type="text/javascript">
 				$(document).ready(function() {
 					$('#slider').nivoSlider({
@@ -33,21 +33,21 @@
 			</script>
 		<?php } ?>
 
-		<link rel="stylesheet" href="assets/css/styles.css">
-		<link rel="shortcut icon" href="assets/img/favicon-pran.ico" type="image/png">
+		<link rel="stylesheet" href="<?= site_url('assets/css/styles.css'); ?>">
+		<link rel="shortcut icon" href="<?= site_url('assets/img/favicon-pran.ico'); ?>" type="image/png">
 
 		<!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 
 	<header>
 		<div id="header-elements">
-			<a href="<?php echo site_url(); ?>" id="logo"></a>
+			<a href="<?= site_url(); ?>" id="logo"></a>
 			<nav>
 				<a href="#" id="menu-icon"></a>
 				<ul>
-					<li><a href="<?php echo site_url(); ?>" class="<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') echo 'current'; ?>">Home</a></li>
-					<li><a href="<?php echo site_url('about'); ?>" class="<?php if($this->uri->segment(1) == 'about') echo 'current'; ?>">About</a></li>
-					<li><a href="<?php echo site_url('contact'); ?>" class="<?php if($this->uri->segment(1) == 'contact') echo 'current'; ?>">Contact</a></li>
+					<li><a href="<?= site_url(); ?>" class="<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') echo 'current'; ?>">Home</a></li>
+					<li><a href="<?= site_url('about'); ?>" class="<?php if($this->uri->segment(1) == 'about') echo 'current'; ?>">About</a></li>
+					<li><a href="<?= site_url('contact'); ?>" class="<?php if($this->uri->segment(1) == 'contact') echo 'current'; ?>">Contact</a></li>
 				</ul>
 			</nav>
 		</div>

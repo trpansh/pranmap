@@ -59,7 +59,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             // Data Tables
-            var oTable = $('#result').dataTable({
+            $('#result').dataTable({
                 "sScrollX": "100%",
                 //"sScrollXInner": "10%",
                 "bScrollCollapse": true,
@@ -69,11 +69,11 @@
                 "aLengthMenu": [5, 10, 15, 25, 50, 100],
                 "bDestroy": true,
                 "sPaginationType": "full_numbers"
-
             });
         });
     </script>
+<?php } elseif (isset($error)) { ?>
+    <p style="text-align: center; color: red; font-weight: bold"><?php echo $error; ?></p>
 <?php } else { ?>
    <p style="text-align: center; color: red; font-weight: bold">No Results Found!</p>
 <?php } ?>
-<?php if (isset($error)) var_dump($error); ?>

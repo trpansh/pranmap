@@ -4,7 +4,7 @@
 			$tables = $this->db->list_tables();
 			$index = 0;
 			foreach ($tables as $table) {
-				$this->db->cache_on();
+				// $this->db->cache_on();
 				$this->db->like('Organization', $match);
 				$this->db->or_like('Contact_Person', $match);
 				$this->db->or_like('District', $match);
@@ -17,29 +17,29 @@
 
 		function filter($batch, $tool, $title, $district, $sector, $theme, $funding, $ethnicity, $status) {
 			if ($batch != FALSE) {
-				$this->db->cache_on();
+				// $this->db->cache_on();
 				$this->_tool($tool);
-				$this->_title($title);
 				$this->_district($district);
 				$this->_sector($sector);
 				$this->_theme($theme);
-				$this->_funding($funding);
 				$this->_ethnicity($ethnicity);
+				$this->_funding($funding);
+				$this->_title($title);
 				$this->_status($status);
 				$query[] = $this->db->get($batch);
 				return $query;
 			} else {
 				$tables = $this->db->list_tables();
 				$index = 0;
-				$this->db->cache_on();
+				// $this->db->cache_on();
 				foreach ($tables as $table) {
 					$this->_tool($tool);
-					$this->_title($title);
 					$this->_district($district);
 					$this->_sector($sector);
 					$this->_theme($theme);
-					$this->_funding($funding);
 					$this->_ethnicity($ethnicity);
+					$this->_funding($funding);
+					$this->_title($title);
 					$this->_status($status);
 					$query[$index] = $this->db->get($table);
 					$index++;
@@ -49,7 +49,7 @@
 		}
 
 		function ajax_call($district) {
-			$this->db->cache_on();
+			// $this->db->cache_on();
 			$data = $this->filter(FALSE, FALSE, FALSE, $district, FALSE, FALSE, FALSE, FALSE, FALSE);
 			foreach ($data as $value) {
 				foreach ($value->result() as $output) {
@@ -64,15 +64,6 @@
 		private function _tool($tool) {
 			if ($tool != FALSE) {
 				$this->db->like('Tool', $tool);
-			}
-		}
-
-		private function _title($title) {
-			if ($title != FALSE && $title == 'both') {
-				$this->db->like('Title', 'mr');
-				$this->db->or_like('Title', 'ms');
-			} elseif ($title != FALSE) {
-				$this->db->like('Title', $title);
 			}
 		}
 
@@ -94,25 +85,31 @@
 			}
 		}
 
-		private function _funding($funding) {
-			if ($funding != FALSE && $funding == 'both') {
-				$this->db->like('Funding', 'mdtf');
-				$this->db->or_like('Funding', 'spbf');
-			} elseif ($funding != FALSE) {
-				$this->db->like('Funding', $funding);
-			}
-		}
-
 		private function _ethnicity($ethnicity) {
 			if ($ethnicity != FALSE) {
 				$this->db->like('Ethnicity', $ethnicity);
 			}
 		}
 
+		private function _funding($funding) {
+			if ($funding != FALSE && $funding == 'both') {
+				$this->db->like('Funding', '');
+			} elseif ($funding != FALSE) {
+				$this->db->like('Funding', $funding);
+			}
+		}
+
+		private function _title($title) {
+			if ($title != FALSE && $title == 'both') {
+				$this->db->like('Title', '');
+			} elseif ($title != FALSE) {
+				$this->db->like('Title', $title);
+			}
+		}
+
 		private function _status($status) {
 			if ($status != FALSE && $status == 'both') {
-				$this->db->like('Project_Status', 'ongoing');
-				$this->db->or_like('Project_Status', 'complete');
+				$this->db->like('Project_Status', '');
 			} elseif ($status != FALSE) {
 				$this->db->like('Project_Status', $status);
 			}

@@ -4,7 +4,7 @@ $(document).ready(function() {
         minZoom: 6,
         maxZoom: 10,
         inertia: true
-    }).setView([28.4, 84.14], 7);
+    }).setView([28.7, 84.14], 6.5);
 
     var popup = new L.Popup({ autoPan: false, minWidth: 110 });
     var message = L.mapbox.legendControl({ position: 'topright' }).addLegend(getMessageHTML()).addTo(map);
@@ -12,7 +12,7 @@ $(document).ready(function() {
     map.attributionControl.addAttribution("PRAN &copy; 2013");
 
 	// L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
- //  		key: 'c9d322df6bdc4f088f0affd664e76506',
+ //  		key: 'Insert Key Here',
  //  		styleId: 1930
 	// }).addTo(map);
 
@@ -50,6 +50,7 @@ $(document).ready(function() {
 	}
 
 	function clickFeature(e) {
+        nepalLayer.resetStyle(e.target);
 		var layer = e.target;
         layer.setStyle({
             fillColor: '#2BA6CB'
@@ -58,20 +59,21 @@ $(document).ready(function() {
         var selection = layer.feature.properties.DISTRICT.toLowerCase();
 
          $.ajax({
-            url: location.protocol + "//" + location.host + "/search/map_ajax",
+            url: location.protocol + "//" + location.host + "/PRAN/search/map_ajax",
             type: 'POST',
-            async: false,
             dataType: 'html',
             data: {district: selection},
         })
         .done(function(data) {
+            // $('select').prop('selectedIndex',0);
+            // $('#search').val("");
             $('div#map-result').empty();
             $('div#map-result').html(data);
             $.scrollTo('div#map-result', 1000);
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/search/column_chart",
+            url: location.protocol + "//" + location.host + "/PRAN/search/column_chart",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
@@ -88,7 +90,7 @@ $(document).ready(function() {
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/search/pie_chart",
+            url: location.protocol + "//" + location.host + "/PRAN/search/pie_chart",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
@@ -99,7 +101,7 @@ $(document).ready(function() {
         .fail(function() {
             $('#pie-chart').hide('slow');
         });
-           
+        
 	}
 
     var closeTooltip;
@@ -240,7 +242,7 @@ $(document).ready(function() {
                 plotShadow: false
             },
             title: {
-                text: '<b>Identified Sectors:</b> In ' + '<b>' + selection[0].toUpperCase() + selection.substring(1) + '</b>'
+                text: '<b>Identified Sectors:</b> In ' + '<b>' + selection[0].toUpperCase() + selection.substring(1) + '</b> District'
             },
             tooltip: {
                 pointFormat: '<b>{point.percentage:.1f}%</b>'
@@ -275,11 +277,19 @@ $(document).ready(function() {
         })
     ;
 
-    $('input[type="submit"]').attr('disabled','disabled');
+    $('input[name="submit"]').attr('disabled','disabled');
     $('select').change(function() {
         if($(this).val() != '') {
-           $('input[type="submit"]').removeAttr('disabled');
+           $('input[name="submit"]').removeAttr('disabled');
         }
-     });
+    });
+
+    $('#search').keyup(function()  {
+        if($(this).val() == '') {
+            $('#search-submit').attr('disabled', true);
+        } else {
+            $('#search-submit').removeAttr('disabled');
+        }
+    });
 
 });	

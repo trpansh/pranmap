@@ -15,8 +15,8 @@
 		</section>
 
 		<div id="contact-form">
-			<br><br>
-			<form action="<?= base_url() . 'contact'; ?>" method="post">  
+			<br>
+			<form action="<?= site_url('contact') ?>" method="post">  
 	                <!-- <label for="name">Name:</label><br/> -->
 	                <input class="form-input" type="text" name="name" required placeholder="Name*"/>
 	                <br><br>

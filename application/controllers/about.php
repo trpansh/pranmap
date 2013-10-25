@@ -9,18 +9,12 @@
 			$this->load->view('about', $data);
 		}
 
-		function download() {
-			$file = FCPATH . 'assets/download/PRAN Brochure_English.pdf';
-			$file_name = "PRAN Brochure_English";
-		    if (file_exists($file)) {
-				header('Content-Description: File Transfer');
-				header('Content-Type: text/' . $file_name .'; name=' . $file_name . '.' . pathinfo($file, PATHINFO_EXTENSION));
-				header('Content-Disposition: attachment; filename=' . $file_name . '.' . pathinfo($file, PATHINFO_EXTENSION));
-				ob_clean();		// erase the output buffer
-        		flush();		// flushes the write buffers of PHP, attempts to push current output all the way to the browser
-       			readfile($file);	// output the file - download
-       			exit();
-			}
+		function download_brochure() {
+			$this->load->helper('download');
+			$file_name = 'PRAN_Brochure_English.pdf';
+			$file_path = FCPATH . 'assets/download/PRAN_Brochure_English.pdf';
+			$data = file_get_contents($file_path);
+			force_download($file_name, $data);
 		}
 	}
 ?>

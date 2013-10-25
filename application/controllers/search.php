@@ -8,19 +8,47 @@
 
 		function index() {
 			if ($this->input->post()) {
-				$match = $this->input->post('search');
-				$data = $this->search_m->search($match);
-				foreach ($data as $value) {
-					foreach ($value->result() as $output) {
-						$data['result'][] = $output;
+				$match = trim(preg_replace('/\s+/', ' ', $this->input->post('search')));
+				$this->load->library('form_validation');
+				$config = array(
+	               array(
+	                     'field'   => 'search', 
+	                     'label'   => 'Search', 
+	                     'rules'   => 'trim|xss_clean|min_length[3]|required|callback__remove_whitespace'
+	                  )
+	            );
+	           	$this->form_validation->set_rules($config);		
+				if ($this->form_validation->run() == TRUE) {
+					$data = $this->search_m->search($match);
+					foreach ($data as $value) {
+						foreach ($value->result() as $output) {
+							$data['result'][] = $output;
+						}
 					}
+					$data['subview'] = 'filter';
+					$this->load->view('map', $data);
+				} else {
+					$data['subview'] = 'filter';
+					$data['error'] = strip_tags(validation_errors());
+					$this->load->view('map', $data);
 				}
-				$data['subview'] = 'filter';
-				$this->load->view('map', $data);
 			} else {
 				redirect('map');
 			}
 		}
+
+		public function _remove_whitespace($string) {
+			$string = preg_replace('/\s+/', ' ', $string);
+			return $string;
+		}
+
+		function map_ajax() {
+			if ($this->input->is_ajax_request()) {
+				$district = $this->input->post('district');
+				$data['filter'] = $this->search_m->ajax_call($district);
+				$this->load->view('filter', $data);
+			}
+		} 
 
 		function column_chart() {
 			if ($this->input->is_ajax_request()) {
@@ -62,13 +90,11 @@
 			} else {
 				redirect('map');
 			}
-
 		}
 
 		function pie_chart() {
 			if ($this->input->is_ajax_request()) {
 			 	$district = $this->input->post('district');
-				// $district = 'kapilvastu';
 				if ($district != FALSE) {
 					$sector_array = array();
 					$sector_trim = array();
@@ -229,15 +255,6 @@
 			fwrite($handle, $json);
 			fclose($handle);
 		}
-
-		function map_ajax() {
-			if ($this->input->is_ajax_request()) {
-				$district = $this->input->post('district');
-				$data['filter'] = $this->search_m->ajax_call($district);
-				$this->load->view('filter', $data);
-			}
-			
-		} 
 
 	}
 ?>
