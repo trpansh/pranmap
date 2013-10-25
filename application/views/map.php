@@ -285,6 +285,7 @@
     </div>
     <div id="map-result">
         <?php if(isset($subview)) $this->load->view($subview); ?>
+        <?php if(isset($default)) echo "<p style='text-align: center; color: #01535e; font-weight: bold'>" . $default . "</p>"; ?>
     </div>
     <div id="report">
         <div id="column-chart"></div>
