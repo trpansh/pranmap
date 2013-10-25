@@ -59,7 +59,7 @@ $(document).ready(function() {
         var selection = layer.feature.properties.DISTRICT.toLowerCase();
 
          $.ajax({
-            url: location.protocol + "//" + location.host + "/PRAN/search/map_ajax",
+            url: location.protocol + "//" + location.host + "/search/map_ajax",
             type: 'POST',
             dataType: 'html',
             data: {district: selection},
@@ -73,7 +73,7 @@ $(document).ready(function() {
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/PRAN/search/column_chart",
+            url: location.protocol + "//" + location.host + "/search/column_chart",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
