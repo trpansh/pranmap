@@ -49,7 +49,7 @@ $(document).ready(function() {
 		})
 	}
 
-	function clickFeature(e) 
+	function clickFeature(e) {
 		var layer = e.target;
         nepalLayer.resetStyle(layer);
         layer.setStyle({
