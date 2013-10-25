@@ -43,16 +43,15 @@ $(document).ready(function() {
     
     function onEachFeature(feature, layer) {
 		layer.on({
-            preclick: removeFeature,
 			click: clickFeature,
 			mousemove: popupFeature,
 			mouseout: resetPopup
 		})
 	}
 
-	function clickFeature(e) {
-        nepalLayer.resetStyle(e.target);
+	function clickFeature(e) 
 		var layer = e.target;
+        nepalLayer.resetStyle(layer);
         layer.setStyle({
             fillColor: '#2BA6CB'
         });
@@ -104,10 +103,6 @@ $(document).ready(function() {
         });
         
 	}
-
-    function removeFeature(e) {
-        nepalLayer.resetStyle(e.target);
-    }
 
     var closeTooltip;
 
