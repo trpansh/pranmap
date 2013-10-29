@@ -11,10 +11,16 @@
 
 		function download_brochure() {
 			$this->load->helper('download');
-			$file_name = 'PRAN_Brochure_English.pdf';
 			$file_path = FCPATH . 'assets/download/PRAN_Brochure_English.pdf';
-			$data = file_get_contents($file_path);
-			force_download($file_name, $data);
+			if (file_exists($file_path)) {
+				header('Content-Description: File Transfer');
+				header('Content-Type: application/pdf');
+				header('Content-Disposition: attachment; filename=PRAN_Brochure_English.pdf');
+				ob_clean();		// erase the output buffer
+        		flush();		// flushes the write buffers of PHP, attempts to push current output all the way to the browser
+       			readfile($file_path);	// output the file - download
+       			exit();
+			}
 		}
 	}
 ?>
