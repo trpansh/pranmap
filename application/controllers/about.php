@@ -10,12 +10,12 @@
 		}
 
 		function download_brochure() {
-			$this->load->helper('download');
-			$file_path = FCPATH . 'assets/download/PRAN_Brochure_English.pdf';
+			$file_path = FCPATH . 'assets/download/WB_PRAN_Brochure_English_Final_May_2013.pdf';
 			if (file_exists($file_path)) {
-				header('Content-Description: File Transfer');
-				header('Content-Type: application/pdf');
-				header('Content-Disposition: attachment; filename=PRAN_Brochure_English.pdf');
+				$this->output->set_header('Content-Description: File Transfer');
+				//header('Content-Type: application/pdf');
+				$this->output->set_content_type('application/pdf');
+				header('Content-Disposition: attachment; filename=WB_PRAN_Brochure_English_Final_May_2013.pdf');
 				ob_clean();		// erase the output buffer
         		flush();		// flushes the write buffers of PHP, attempts to push current output all the way to the browser
        			readfile($file_path);	// output the file - download

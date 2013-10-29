@@ -52,7 +52,7 @@
 
 					$this->email->from($email, $name);
 					$this->email->to('pran@worldbank.org');
-					$this->email->subject('Message from pranmap.org.np');
+					$this->email->subject('Message from pranmap.org');
 					$this->email->message($message);	
 
 					if($this->email->send()) {
