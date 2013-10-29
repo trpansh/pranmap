@@ -9,9 +9,9 @@
 		</footer>
 
 		<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') { ?>
-			<script src="<?= site_url('assets/js/alertify.min.js'); ?>"></script>
+			<script src="<?= site_url('assets/js/alertify.min.js'); ?>" defer="defer"></script>
 			<script src="<?= site_url('assets/js/scrollTo-1.4.3.1-min.js'); ?>" defer="defer"></script>
-			<script src="<?= site_url('assets/js/nepal-district.min.js'); ?>" defer="defer"></script>
+			<script src="<?= site_url('assets/js/nepal-district.min.js'); ?>"></script>
 		    <script src="<?= site_url('assets/js/district-info.js'); ?>" defer="defer"></script>
 			<script src="<?= site_url('assets/js/map.js'); ?>" defer="defer"></script>
 			<script src="<?= site_url('assets/js/DataTables-1.9.4/media/js/jquery.dataTables.min.js'); ?>" defer="defer"></script>
@@ -21,7 +21,7 @@
 		<?php } ?>
 		
 		<?php if($this->uri->segment(1) == 'about') { ?>
-			<script src="<?= site_url('assets/js/nivo-slider/jquery.nivo.slider.pack.js') ?>"></script>
+			<script src="<?= site_url('assets/js/nivo-slider/jquery.nivo.slider.pack.js') ?>" defer="defer"></script>
 		<?php } ?>
 	</body>
 

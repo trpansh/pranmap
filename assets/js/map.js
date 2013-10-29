@@ -13,7 +13,8 @@ $(document).ready(function() {
 
 	// L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
  //  		key: 'Insert Key Here',
- //  		styleId: 1930
+ //  		styleId: 1930,
+ //         detectRetina: true
 	// }).addTo(map);
 
     function getStyle(feature) {
@@ -79,6 +80,7 @@ $(document).ready(function() {
             data: {district: selection},
         })
         .done(function(json) {
+            $('#report').show();
             alertify.set({ delay: 1000 });
             alertify.success("Results Found!");
             columnChart(json, selection);
@@ -90,7 +92,7 @@ $(document).ready(function() {
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/search/pie_chart",
+            url: location.protocol + "//" + location.host + "/PRAN/search/pie_chart",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
@@ -101,7 +103,6 @@ $(document).ready(function() {
         .fail(function() {
             $('#pie-chart').hide('slow');
         });
-        
 	}
 
     var closeTooltip;

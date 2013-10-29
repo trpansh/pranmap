@@ -5,23 +5,24 @@
 		}
 
 		function index() {
+			$this->load->helper('form');
 			if ($this->input->post()) {
 				$this->load->library('form_validation');
 				$config = array(
 	               array(
 	                     'field'   => 'email', 
 	                     'label'   => 'Email', 
-	                     'rules'   => 'trim|xss_clean|valid_email|required'
+	                     'rules'   => 'trim|max_length[254]|xss_clean|valid_email|required'
 	                  ),
 	               array(
 	                     'field'   => 'name', 
 	                     'label'   => 'Name', 
-	                     'rules'   => 'required|xss_clean'
+	                     'rules'   => 'required|max_length[50]|xss_clean'
 	                  ),
 	               array(
 	                     'field'   => 'message', 
 	                     'label'   => 'Message', 
-	                     'rules'   => 'required|xss_clean'
+	                     'rules'   => 'required|max_length[1500]|xss_clean'
 	                  )
 	            );
 	            $this->form_validation->set_rules($config);			
@@ -51,7 +52,7 @@
 					$message = $this->input->post('message');
 
 					$this->email->from($email, $name);
-					$this->email->to('pran@worldbank.org');
+					$this->email->to('acharya_saugat@hotmail.com');
 					$this->email->subject('Message from pranmap.org');
 					$this->email->message($message);	
 
@@ -62,7 +63,7 @@
 					// 	show_error($this->email->print_debugger());
 					// }
 				} else {
-					$data['error'] = 'Invalid credentials.';
+					$data['error'] = validation_errors();
 				}
 			}
 

@@ -278,7 +278,6 @@
 
             <?php
                 echo form_submit('submit', 'Go', "class='go'");
-
                 echo form_close();
             ?>
         </div>

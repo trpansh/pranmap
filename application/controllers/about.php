@@ -13,7 +13,6 @@
 			$file_path = FCPATH . 'assets/download/WB_PRAN_Brochure_English_Final_May_2013.pdf';
 			if (file_exists($file_path)) {
 				$this->output->set_header('Content-Description: File Transfer');
-				//header('Content-Type: application/pdf');
 				$this->output->set_content_type('application/pdf');
 				header('Content-Disposition: attachment; filename=WB_PRAN_Brochure_English_Final_May_2013.pdf');
 				ob_clean();		// erase the output buffer

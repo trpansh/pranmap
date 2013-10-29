@@ -16,29 +16,61 @@
 
 		<div id="contact-form">
 			<br>
-			<form action="<?= site_url('contact') ?>" method="post">  
-	                <!-- <label for="name">Name:</label><br/> -->
-	                <input class="form-input" type="text" name="name" required placeholder="Name*"/>
-	                <br><br>
-	                <!-- <label for="email">Email:</label><br/> -->
-	                <input class="form-input" type="email" name="email" required placeholder="Email*"/>
-	                <br><br>
-	                <!-- <label for="message">Message:</label><br/> -->
-	                <textarea name="message" required placeholder="Message*"></textarea>
-	                <br><br>
-	                <?php 
-			            if (isset($error)) { 
-			                echo "<div class='error'>";
-			                echo $error;
-			                echo "</div><br><br>"; 
-			            } 
-			            elseif (isset($success)) { 
-			                echo "<div class='success'>";
-			                echo "<p>" . $success . "</p>"; 
-			                echo "</div><br><br>";
-			            } 
-		        	?>
-	                <input id="form-submit" type="submit" name="Send" value="Send Message" />
+			<form action="<?= site_url('contact') ?>" method="post">
+				<?php 
+					if (isset($error)) {
+						$name = set_value('name');
+						$email = set_value('email');
+						$message = set_value('message');
+					} else {
+						$name = '';
+						$email = '';
+						$message = '';
+					}
+					$data = array(
+	                        'name' => 'name',
+	                        'class' => 'form-input',
+	                        'maxlength' => 50,
+	                        'placeholder' => 'Name*',
+	                        'required' => 'required',
+	                        'value' => $name
+	                    );
+                	echo form_input($data);
+                	echo "<br><br>";
+                	$data = array(
+                			'name' => 'email',
+                			'class' => 'form-input',
+                			'type' => 'email',
+                			'maxlength' => 254,
+                			'placeholder' => 'Email*',
+                			'required' => 'required',
+                			'value' => $email
+                		);
+                	echo form_input($data);
+                	echo "<br><br>";
+                	$data = array(
+                			'name' => 'message',
+                			'maxlength' => 1500,
+                			'placeholder' => 'Message*',
+                			'required' => 'required',
+                			'value' => $message
+                		);
+                	echo form_textarea($data);
+                	echo "<br>";
+                ?> 
+                <?php 
+		            if (isset($error)) { 
+		                echo "<div class='error'>";
+		                echo $error;
+		                echo "</div><br>"; 
+		            } 
+		            elseif (isset($success)) { 
+		                echo "<div class='success'>";
+		                echo "<p>" . $success . "</p>"; 
+		                echo "</div><br>";
+		            } 
+	        	?>
+	            <input id="form-submit" type="submit" name="Send" value="Send Message" />
 	        </form>
 		</div>
 	</div>
