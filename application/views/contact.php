@@ -11,7 +11,7 @@
 			<p><a href="tel:977-1-4226792">977-1-4226792</a>
 			Ext. 6184.</p>
 			<h3>Website:</h3>
-			<p><a href="http://www.pran.org.np" target="_blank">www.pran.org.np</a></p>
+			<p><a href="http://worldbank.org/np/pran" target="_blank">www.worldbank.org/np/pran</a></p>
 		</section>
 
 		<div id="contact-form">
@@ -53,8 +53,8 @@
                 			'maxlength' => 1500,
                 			'placeholder' => 'Message*',
                 			'required' => 'required',
-                			'cols' => 0,
-                			'rows' => 0,
+                			'col' => 10,
+                			'row' => 10,
                 			'value' => $message
                 		);
                 	echo form_textarea($data);
