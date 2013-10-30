@@ -53,7 +53,6 @@
                 			'maxlength' => 1500,
                 			'placeholder' => 'Message*',
                 			'required' => 'required',
-<<<<<<< HEAD
                 			'cols' => 0,
                 			'rows' => 0,
 =======
