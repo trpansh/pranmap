@@ -62,6 +62,7 @@ $(document).ready(function() {
          $.ajax({
             url: location.protocol + "//" + location.host + "/search/map_ajax",
             type: 'POST',
+            async: false,
             dataType: 'html',
             data: {district: selection},
         })
@@ -80,7 +81,6 @@ $(document).ready(function() {
             data: {district: selection},
         })
         .done(function(json) {
-            $('#report').show();
             alertify.set({ delay: 1000 });
             alertify.success("Results Found!");
             columnChart(json, selection);
