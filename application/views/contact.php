@@ -16,7 +16,7 @@
 
 		<div id="contact-form">
 			<br>
-			<form action="<?= site_url('contact') ?>" method="post">
+			<form action="<?= site_url('contact#contact-form') ?>" method="post">
 				<?php 
 					if (isset($error)) {
 						$name = set_value('name');
@@ -53,6 +53,8 @@
                 			'maxlength' => 1500,
                 			'placeholder' => 'Message*',
                 			'required' => 'required',
+                			'cols' => 0,
+                			'rows' => 0,
                 			'value' => $message
                 		);
                 	echo form_textarea($data);
