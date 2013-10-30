@@ -55,10 +55,6 @@
                 			'required' => 'required',
                 			'cols' => 0,
                 			'rows' => 0,
-=======
-                			'col' => 10,
-                			'row' => 10,
->>>>>>> 532fd78a78057450bb4fec424ddb36d0a17f2cc1
                 			'value' => $message
                 		);
                 	echo form_textarea($data);
