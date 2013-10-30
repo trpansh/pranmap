@@ -92,7 +92,7 @@ $(document).ready(function() {
         });
 
         $.ajax({
-            url: location.protocol + "//" + location.host + "/PRAN/search/pie_chart",
+            url: location.protocol + "//" + location.host + "/search/pie_chart",
             type: 'POST',
             dataType: 'json',
             data: {district: selection},
