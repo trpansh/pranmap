@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $('#report').hide();
     var map = L.mapbox.map('map', false, {
         minZoom: 6,
         maxZoom: 10,
@@ -51,6 +51,7 @@ $(document).ready(function() {
 	}
 
 	function clickFeature(e) {
+        $('#report').show();
 		var layer = e.target;
         nepalLayer.resetStyle(layer);
         layer.setStyle({
