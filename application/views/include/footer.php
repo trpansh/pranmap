@@ -7,7 +7,17 @@
 			</div>
 			<div id="footer-right"><br /><p>Copyright &copy; PRAN. All rights reserved.</p></div>
 		</footer>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-24810133-4']);
+			_gaq.push(['_trackPageview']);
 
+			(function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
 		<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') { ?>
 			<script src="<?= site_url('assets/js/alertify.min.js'); ?>" defer="defer"></script>
 			<script src="<?= site_url('assets/js/scrollTo-1.4.3.1-min.js'); ?>" defer="defer"></script>
