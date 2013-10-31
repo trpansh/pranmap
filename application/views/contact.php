@@ -4,7 +4,7 @@
 		<section id="contact-detail">
 			<h1><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->Contact Us</h1>
 		     <br> 
-			<p style="width:80%">For more information about Program for Accountability in Nepal (PRAN) or to apply to participate in program activities.</p>
+			<p style="width:80%">For more information about Program for Accountability in Nepal (PRAN):</p>
 			<h3>Email:</h3>
 			<address><a href="mailto:pran@worldbank.org">pran@worldbank.org</a></address><br>
 			<h3>Telephone:</h3>

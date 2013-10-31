@@ -133,6 +133,7 @@
                 $tools = array(
                         '' => 'Select Tool',
                         'analysis of national budgets' => 'Analysis of National Budgets',
+                        'budget analysis' => 'Budget Anlaysis',
                         'budget demystification and outreach' => 'Budget Demystification and Outreach',
                         'budget work' => 'Budget Work',
                         //'budgets of local bodies' => 'Budgets of Local Bodies',
@@ -149,9 +150,9 @@
                         'community score card' => 'Community Score Card',
                         // 'declaration of assets' => 'Declaration of Assets',
                         // 'identified sector for pets' => 'Identified Sector for PETS',
-                        'independent budget analysis' => 'Independent Budget Anlaysis',
                         // 'integrity pact' => 'Integrity Pact',
                         // 'multi-stakeholder groups' => 'Multi-stakeholder Groups',
+                        'participatory budget analysis' => 'Participatory Budget Analysis',
                         'participatory budgeting' => 'Participatory Budgeting',
                         'participatory national model budget' => 'Participatory National Model Budget',
                         'participatory planning' => 'Participatory Planning',
