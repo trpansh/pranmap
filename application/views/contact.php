@@ -3,12 +3,8 @@
 	<div class="contact">
 		<section id="contact-detail">
 			<h1><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->Contact Us</h1>
-		     <br> 
-<<<<<<< HEAD
+		    <br> 
 			<p style="width:80%">For more information on Program for Accountability in Nepal (PRAN):</p>
-=======
-			<p style="width:80%">For more information about Program for Accountability in Nepal (PRAN):</p>
->>>>>>> 4c56c091dcedecc012955be2ffcf1f3390335cca
 			<h3>Email:</h3>
 			<address><a href="mailto:pran@worldbank.org">pran@worldbank.org</a></address><br>
 			<h3>Telephone:</h3>
