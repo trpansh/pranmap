@@ -4,9 +4,9 @@
 		<section id="about">
 
 			<h1>About PRAN</h1><br>
-		    <h3>Programme for Accountability in Nepal is designed to provide practical training and action learning aimed at developing the capacity of civil society and government actors to promote social accountability in Nepal.</h3>
+		    <h3>Programme for Accountability in Nepal (PRAN) is designed to provide practical training and action learning aimed at developing the capacity of civil society and government actors to promote social accountability in Nepal.</h3>
 			<br>
-		    <p>It is hoped that the impact of these initiatives over time will be to promote more accountable, honest, transparent and responsive government agencies delivering quality public services. PRAN has over 70 CSOs working through two programs Public Financial Management(PFM) under Multi Donor Trust Fund(MDTF) and Public Service Delivery(PSD) under State and Peace Building Fund(SPBF).</p>
+		    <p>It is hoped that the impact of these initiatives over time will be to promote more accountable, honest, transparent and responsive government agencies delivering quality public services. PRAN has over 70 CSOs working through two programs Public Financial Management (PFM) under Multi Donor Trust Fund (MDTF) and Public Service Delivery (PSD) under State and Peace Building Fund (SPBF).</p>
 		</section>
 
 		<div id="carousel">
