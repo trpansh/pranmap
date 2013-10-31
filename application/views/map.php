@@ -183,15 +183,15 @@
                     // 'budget' => 'Budget',
                     'education' => 'Education',
                     // 'entitlements' => 'Entitlements',
-                    'finance' => 'Finance',
-                    'social protection' => 'Social Protection',
+                    //'finance' => 'Finance',
+                    //'social protection' => 'Social Protection',
                     // 'good governance' => 'Good Governance',
                     'health' => 'Health',
                     // 'infrastructure' => 'Infrastructure',
-                    'law and justice' => 'Law and Justice',
+                    // 'law and justice' => 'Law and Justice',
                     // 'local development' => 'Local Development',
                     // 'performance monitoring' => 'Performance Monitoring',
-                    'public administration' => 'Public Administration',
+                    'public administration' => 'Public Administration, Law, and Justice',
                     'water and sanitation' => 'Water and Sanitation'
                 );
             ?>

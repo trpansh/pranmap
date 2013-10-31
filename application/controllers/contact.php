@@ -52,7 +52,7 @@
 					$message = $this->input->post('message');
 
 					$this->email->from($email, $name);
-					$this->email->to('acharya_saugat@hotmail.com');
+					$this->email->to('pran@worldbank.org');
 					$this->email->subject('Message from pranmap.org');
 					$this->email->message($message);	
 

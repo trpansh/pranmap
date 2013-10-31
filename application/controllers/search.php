@@ -95,6 +95,7 @@
 		function pie_chart() {
 			if ($this->input->is_ajax_request()) {
 			 	$district = $this->input->post('district');
+				//$district = 'Kathmandu';
 				if ($district != FALSE) {
 					$sector_array = array();
 					$sector_trim = array();
@@ -114,10 +115,13 @@
 						foreach ($sector_array as $value) {
 							$array = array_map("trim",explode(",", $value));
 							foreach ($array as $key => $value) {
-								array_push($sector_trim, $value);
+									array_push($sector_trim, $value);
 							}
 						}
 						$sector_count = array_count_values($sector_trim);
+						unset($sector_count['Law and Justice']);
+						$sector_count['Public Administration, Law, and Justice'] = $sector_count['Public Administration'];
+						unset($sector_count['Public Administration']);
 						$json = array();
 						foreach ($sector_count as $key => $value) {
 							$temp[0] = $key;
