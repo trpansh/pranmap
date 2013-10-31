@@ -120,8 +120,10 @@
 						}
 						$sector_count = array_count_values($sector_trim);
 						unset($sector_count['Law and Justice']);
-						$sector_count['Public Administration, Law, and Justice'] = $sector_count['Public Administration'];
-						unset($sector_count['Public Administration']);
+						if (isset($sector_count['Public Administration'])) {
+							$sector_count['Public Administration, Law, and Justice'] = $sector_count['Public Administration'];
+							unset($sector_count['Public Administration']);	
+						}
 						$json = array();
 						foreach ($sector_count as $key => $value) {
 							$temp[0] = $key;
