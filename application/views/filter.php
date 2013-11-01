@@ -32,6 +32,7 @@
         <?php 
             foreach ($items as $item) { 
                 if (preg_match("*SAP*", $item->Designation) || preg_match("*SA Practitioner*", $item->Designation)) {
+                $pattern = array('/SA Practitioner/', '/SAP/');
         ?>
             <tr>
                 <td><?= $item->Organization ?></td>
@@ -45,7 +46,7 @@
                 <td><?= $item->Contact_Person ?></td>
                 <td><?= (preg_match("/\bMr\b/i", $item->Title) ? "Male" : "Female") ?></td>
                 <td><?= $item->Ethnicity ?></td>
-                <td><?= $item->Designation ?></td>
+                <td><?= preg_replace($pattern, 'Social Accountability Practitioner', $item->Designation) ?></td>
                 <td><?= $item->Telephone ?></td>
                 <td><?= $item->Email ?></td>
                 <td><?= $item->Project_Status ?></td>

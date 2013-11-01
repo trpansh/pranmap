@@ -19,7 +19,8 @@ var districtInfo = {
         "SPBF": 1
     },
     "Bajura": {
-        "CSO": 0
+        "CSO": 2,
+        "MDTF": 2
     },
     "Banke": {
         "CSO": 1,
@@ -50,8 +51,8 @@ var districtInfo = {
         "CSO": 0
     },
     "Dang": {
-        "CSO": 6,
-        "MDTF": 5,
+        "CSO": 7,
+        "MDTF": 6,
         "SPBF": 1
     },
     "Darchula": {
@@ -80,8 +81,8 @@ var districtInfo = {
         "SPBF": 1
     },
     "Gorkha": {
-        "CSO": 2,
-        "MDTF": 2
+        "CSO": 3,
+        "MDTF": 3
     },
     "Gulmi": {
         "CSO": 0
@@ -106,21 +107,21 @@ var districtInfo = {
         "SPBF": 1
     },
     "Kailali": {
-        "CSO": 4,
-        "MDTF": 3,
+        "CSO": 5,
+        "MDTF": 4,
         "SPBF": 1
     },
     "Kalikot": {
-        "CSO": 4,
-        "MDTF": 3,
+        "CSO": 5,
+        "MDTF": 4,
         "SPBF": 1
     },
     "Kanchanpur": {
         "CSO": 0
     },
     "Kapilvastu": {
-        "CSO": 9,
-        "MDTF": 7,
+        "CSO": 11,
+        "MDTF": 9,
         "SPBF": 2
     },
     "Kaski": {
@@ -208,8 +209,8 @@ var districtInfo = {
         "SPBF": 2
     },
     "Rolpa": {
-        "CSO": 2,
-        "MDTF": 1,
+        "CSO": 3,
+        "MDTF": 2,
         "SPBF": 1
     },
     "Rukum": {

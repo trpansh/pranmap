@@ -53,7 +53,7 @@
 		function column_chart() {
 			if ($this->input->is_ajax_request()) {
 				$district = $this->input->post('district');
-
+				// $district = 'Kapilvastu';
 				if ($district != FALSE) {
 					$cso_array = array();
 					$funding_array = array();
@@ -73,10 +73,14 @@
 						}
 						$cso_array = array_unique($cso_array);
 						$funding_count = array_count_values($funding_array);
+						// var_dump($funding_count);
 						if (sizeof($funding_count) == 1) {
 							$count = array("CSO" => count($cso_array), current(array_keys($funding_count)) => $funding_count[current(array_keys($funding_count))]);
 						} elseif (sizeof($funding_count) == 2) {
 							$count = array("CSO" => count($cso_array), "MDTF" => $funding_count['MDTF / PFM'], "SPBF" => $funding_count['SPBF']);
+						} elseif (sizeof($funding_count) == 3) {
+							$mdtf = $funding_count['MDTF / PFM'] + $funding_count['MDTF'];
+							$count = array("CSO" => count($cso_array), "MDTF" => $mdtf, "SPBF" => $funding_count['SPBF']);
 						}
 						$json = array();
 						foreach ($count as $key => $value) {
