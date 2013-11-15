@@ -1,80 +1,75 @@
-<?php $this->load->view('include/header'); ?>
+<?php
+	class Contact extends CI_Controller {
+		function __construct() {
+			parent::__construct();
+		}
 
-	<div class="contact">
-		<section id="contact-detail">
-			<h1><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->Contact Us</h1>
-		     <br> 
-			<p style="width:80%">For more information about Program for Accountability in Nepal (PRAN):</p>
-			<h3>Email:</h3>
-			<address><a href="mailto:pran@worldbank.org">pran@worldbank.org</a></address><br>
-			<h3>Telephone:</h3>
-			<p><a href="tel:977-1-4226792">977-1-4226792</a>
-			Ext. 6184.</p>
-			<h3>Website:</h3>
-			<p><a href="http://worldbank.org/np/pran" target="_blank">www.worldbank.org/np/pran</a></p>
-		</section>
+		function index() {
+			$this->load->helper('form');
+			if ($this->input->post()) {
+				$this->load->library('form_validation');
+				$config = array(
+	               array(
+	                     'field'   => 'email', 
+	                     'label'   => 'Email', 
+	                     'rules'   => 'trim|max_length[254]|xss_clean|valid_email|required'
+	                  ),
+	               array(
+	                     'field'   => 'name', 
+	                     'label'   => 'Name', 
+	                     'rules'   => 'required|max_length[50]|xss_clean'
+	                  ),
+	               array(
+	                     'field'   => 'message', 
+	                     'label'   => 'Message', 
+	                     'rules'   => 'required|max_length[1500]|xss_clean'
+	                  )
+	            );
+	            $this->form_validation->set_rules($config);			
+				if ($this->form_validation->run() == TRUE) {
+					// Email SMTP
+					$config = array(
+								'protocol' => 'smtp',
+								'smtp_host' => 'ssl://smtp.gmail.com',
+								'smtp_port' => 465,
+								'smtp_timeout' => 7,
+								'smtp_user' => 'pranmap@gmail.com',
+								'smtp_pass' => 'pranmap12345',
+								'wordwrap' => TRUE,
+								'wrapchars' => 95,
+								'mailtype' => 'text',
+								'charset' => 'iso-8859-1',
+								'validate' => TRUE,
+								'crlf' => "\r\n",
+								'newline' => "\r\n"
+							);
+					
+					$this->load->library('email');
+					$this->email->initialize($config);
 
-		<div id="contact-form">
-			<br>
-			<form action="<?= site_url('contact#contact-form') ?>" method="post">
-				<?php 
-					if (isset($error)) {
-						$name = set_value('name');
-						$email = set_value('email');
-						$message = set_value('message');
-					} else {
-						$name = '';
-						$email = '';
-						$message = '';
+					$name = $this->input->post('name');
+					$email = $this->input->post('email');
+					$message = $this->input->post('message');
+
+					$this->email->from($email, $name);
+					$this->email->to('pran@worldbank.org');
+					$this->email->subject('Message from pranmap.org');
+					$this->email->message($message);	
+
+					if($this->email->send()) {
+						$data['success'] = 'Your message has been recieved.';
 					}
-					$data = array(
-	                        'name' => 'name',
-	                        'class' => 'form-input',
-	                        'maxlength' => 50,
-	                        'placeholder' => 'Name*',
-	                        'required' => 'required',
-	                        'value' => $name
-	                    );
-                	echo form_input($data);
-                	echo "<br><br>";
-                	$data = array(
-                			'name' => 'email',
-                			'class' => 'form-input',
-                			'type' => 'email',
-                			'maxlength' => 254,
-                			'placeholder' => 'Email*',
-                			'required' => 'required',
-                			'value' => $email
-                		);
-                	echo form_input($data);
-                	echo "<br><br>";
-                	$data = array(
-                			'name' => 'message',
-                			'maxlength' => 1500,
-                			'placeholder' => 'Message*',
-                			'required' => 'required',
-                			'col' => 10,
-                			'row' => 10,
-                			'value' => $message
-                		);
-                	echo form_textarea($data);
-                	echo "<br>";
-                ?> 
-                <?php 
-		            if (isset($error)) { 
-		                echo "<div class='error'>";
-		                echo $error;
-		                echo "</div><br>"; 
-		            } 
-		            elseif (isset($success)) { 
-		                echo "<div class='success'>";
-		                echo "<p>" . $success . "</p>"; 
-		                echo "</div><br>";
-		            } 
-	        	?>
-	            <input id="form-submit" type="submit" name="Send" value="Send Message" />
-	        </form>
-		</div>
-	</div>
+					// else {
+					// 	show_error($this->email->print_debugger());
+					// }
+				} else {
+					$data['error'] = validation_errors();
+				}
+			}
 
-<?php $this->load->view('include/footer'); ?>
+			$data['title'] = 'Contact - Program for Accountability in Nepal';
+			$this->load->view('contact', $data);
+			
+		}
+	}
+?>

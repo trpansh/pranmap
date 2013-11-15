@@ -1,11 +1,15 @@
 		<footer>
 			<br />
 			<div id="footer-left">
-				<p>Email: pran@worldbank.org</p>
-				<p>Telephone: 977-1-4226792, Ext. 6184.</p>
-				<p>Website: www.worldbank.org/np/pran</p>
+				<p>Email: <a href="mailto:pran@worldbank.org" target="_blank">pran@worldbank.org</a></p>
+				<p>Telephone: <a href="tel:977-1-4226792">977-1-4226792</a>
+			Ext. 6184.</p>
+				<p>Website: <a href="http://worldbank.org/np/pran" target="_blank">www.worldbank.org/np/pran</a></p>
 			</div>
-			<div id="footer-right"><br /><p>Copyright &copy; PRAN. All rights reserved.</p></div>
+			<div id="footer-right"><br />
+				<p>Data Courtesy: <a href="http://www.ceci.ca/en/where-we-work/asia/nepal/projects/pran-2/" target="_blank">CECI, Nepal.</a></p>
+				<p>Copyright &copy; PRAN. All rights reserved.</p>
+			</div>
 		</footer>
 
 		<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') { ?>

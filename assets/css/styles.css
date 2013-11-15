@@ -520,10 +520,12 @@ footer p {
 
 #footer-left{
 	float: left;
+	text-align: left;
 }
 
 #footer-right{
 	float: right;
+	text-align: right;
 }
 
 .error, .success {

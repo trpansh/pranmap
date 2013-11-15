@@ -5,6 +5,7 @@ $(document).ready(function() {
         maxZoom: 10,
         inertia: true
     }).setView([28.7, 84.14], 6.5);
+    map.scrollWheelZoom.disable();
 
     var popup = new L.Popup({ autoPan: false, minWidth: 110 });
     var message = L.mapbox.legendControl({ position: 'topright' }).addLegend(getMessageHTML()).addTo(map);
