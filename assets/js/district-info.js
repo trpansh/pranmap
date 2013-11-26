@@ -81,8 +81,8 @@ var districtInfo = {
         "SPBF": 1
     },
     "Gorkha": {
-        "CSO": 3,
-        "MDTF": 3
+        "CSO": 4,
+        "MDTF": 4
     },
     "Gulmi": {
         "CSO": 0
