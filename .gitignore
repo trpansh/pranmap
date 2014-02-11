@@ -1,4 +1,6 @@
 .DS_Store
+.htaccess
+robots.txt
 
 application/config/development/database.php
 application/config/production/database.php
