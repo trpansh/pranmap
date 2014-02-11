@@ -53,8 +53,8 @@
                 			'maxlength' => 1500,
                 			'placeholder' => 'Message*',
                 			'required' => 'required',
-                			'col' => 10,
-                			'row' => 10,
+                			'cols' => 10,
+                			'rows' => 10,
                 			'value' => $message
                 		);
                 	echo form_textarea($data);

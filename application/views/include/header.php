@@ -3,9 +3,10 @@
 <html lang="en">
 
 	<head>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<title><?php if(isset($title)) { echo $title; } else { echo "Program for Accountability in Nepal"; } ?></title>
-		<meta name="description" content="PRAN">
+		<meta name="description" content="Programme for Accountability in Nepal (PRAN) is designed to provide practical training and action learning aimed at developing the capacity of civil society and government actors to promote social accountability in Nepal.">
+		<meta name="keywords" content="accountability, social, funding, programme, accountable, transparent, services, agencies, promotion, initiative, society, government, citizen, budget, public">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<script src="<?= site_url('assets/js/jquery-2.0.3.min.js') ?>"></script>
@@ -39,18 +40,17 @@
 		<!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 
-	<header>
-		<div id="header-elements">
-			<a href="<?= site_url(); ?>" id="logo"></a>
-			<nav>
-				<a href="#" id="menu-icon"></a>
-				<ul>
-					<li><a href="<?= site_url(); ?>" class="<?php if($this->uri->rsegments[1] == 'map' || $this->uri->segment(1) == 'search' || $this->uri->segment(1) == 'filters') echo 'current'; ?>">Home</a></li>
-					<li><a href="<?= site_url('about'); ?>" class="<?php if($this->uri->segment(1) == 'about') echo 'current'; ?>">About</a></li>
-					<li><a href="<?= site_url('contact'); ?>" class="<?php if($this->uri->segment(1) == 'contact') echo 'current'; ?>">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-
 	<body>
+		<header>
+			<div id="header-elements">
+				<a href="<?= site_url(); ?>" id="logo"></a>
+				<nav>
+					<a href="#" id="menu-icon"></a>
+					<ul>
+						<li><a href="<?= site_url(); ?>" class="<?php if($this->uri->rsegments[1] == 'map' || $this->uri->segment(1) == 'search' || $this->uri->segment(1) == 'filters') echo 'current'; ?>">Home</a></li>
+						<li><a href="<?= site_url('about'); ?>" class="<?php if($this->uri->segment(1) == 'about') echo 'current'; ?>">About</a></li>
+						<li><a href="<?= site_url('contact'); ?>" class="<?php if($this->uri->segment(1) == 'contact') echo 'current'; ?>">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>

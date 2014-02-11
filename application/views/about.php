@@ -34,13 +34,19 @@
 
 	<div id="goto">
 		<div id="broucher">
-			<img src="<?= site_url('assets/img/icon-broucher.png') ?>" title="Download Brochure" alt="Download Brochure" style="height:150px; width:150px;"><br><br><p>To know more about PRAN.</p><a href="<?php echo site_url('about/download_brochure'); ?>"><input class="button" name="download broucher" type="button" value="Download Brochure"></a>
+			<img src="<?= site_url('assets/img/icon-broucher.png') ?>" title="Download Brochure" alt="Download Brochure" style="height:150px; width:150px;"><br><br>
+			<p>To know more about PRAN.</p>
+			<button class="button" name="downloadbrochure" onclick="location.href='<?php echo site_url('about/download_brochure'); ?>'">Download Brochure</button>
 		</div>
 		<div id="viewmap">
-			<img src="<?= site_url('assets/img/icon-map.png') ?>" title="View Map" alt="View Map" style="height:150px; width:150px;"><br><br><p>For better insights on PRAN activities.</p><a href="<?php echo site_url('map'); ?>"><input class="button" name="viewmap" type="button" value="View Map"></a>
+			<img src="<?= site_url('assets/img/icon-map.png') ?>" title="View Map" alt="View Map" style="height:150px; width:150px;"><br><br>
+			<p>For better insights on PRAN activities.</p>
+			<button class="button" name="viewmap" onclick="location.href='<?php echo site_url('map'); ?>'">View Map</button>
 		</div>
 		<div id="contact">
-			<img src="<?= site_url('assets/img/icon-contact.png') ?>" title="Contact Us" alt="Contact Us" style="height:150px; width:150px;"><br><br><p>Want to be associated with PRAN ?</p><a href="<?php echo site_url('contact'); ?>"><input class="button" name="gotocontact" type="button" value="Contact Us"></a>
+			<img src="<?= site_url('assets/img/icon-contact.png') ?>" title="Contact Us" alt="Contact Us" style="height:150px; width:150px;"><br><br>
+			<p>Want to be associated with PRAN ?</p>
+			<button class="button" name="gotocontact" onclick="location.href='<?php echo site_url('contact'); ?>'">Contact Us</button>
 		</div>		
 	</div>
 	

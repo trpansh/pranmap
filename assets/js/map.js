@@ -170,7 +170,7 @@ $(document).ready(function() {
             );
         }
 
-        return "<span><b><u>Total CSO's</u></b></span><br><br>" + labels.join('<br>');
+        return "<span><b>Total CSO's</b></span><br><br>" + labels.join('<br>');
     }
 
     function getMessageHTML() {
