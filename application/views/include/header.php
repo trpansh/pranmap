@@ -11,7 +11,7 @@
 
 		<script src="<?= site_url('assets/js/jquery-2.0.3.min.js') ?>"></script>
 		
-		<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') { ?>
+		<?php if($this->uri->rsegments[1] == 'map' || $this->uri->segment(1) == 'search' || $this->uri->segment(1) == 'filters') { ?>
 			<link rel="stylesheet" type="text/css" href="<?= site_url('assets/js/mapbox/mapbox.css'); ?>">
 		    <link rel="stylesheet" type="text/css" href="<?= site_url('assets/js/DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css'); ?>">
 		    <link rel="stylesheet" type="text/css" href="<?= site_url('assets/css/jquery-ui/jquery-ui.min.css'); ?>">
@@ -22,22 +22,23 @@
 		<?php if ($this->uri->segment(1) == 'about') { ?>
 			<link rel="stylesheet" href="<?= site_url('assets/js/nivo-slider/nivo-slider.css'); ?>" type="text/css" />
 			<link rel="stylesheet" href="<?= site_url('assets/js/nivo-slider/themes/default/default.css'); ?>" type="text/css" />
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$('#slider').nivoSlider({
-					    effect: 'random',               // Specify sets like: 'fold,fade,sliceDown'
-					    controlNav: true,              // 1,2,3... navigation
-					    pauseOnHover: true,             // Stop animation while hovering
-					    randomStart: true             // Start on a random slide
-					});
-				});
-			</script>
 		<?php } ?>
 
 		<link rel="stylesheet" href="<?= site_url('assets/css/styles.css'); ?>">
 		<link rel="shortcut icon" href="<?= site_url('assets/img/favicon-pran.png'); ?>" type="image/png">
-
 		<!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+		<!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-45269476-1', 'pranmap.org');
+		  ga('send', 'pageview');
+
+		</script>
 	</head>
 
 	<body>

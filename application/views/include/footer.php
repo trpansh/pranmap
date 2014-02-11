@@ -12,7 +12,7 @@
 			</div>
 		</footer>
 
-		<?php if($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'contact') { ?>
+		<?php if($this->uri->rsegments[1] == 'map' || $this->uri->segment(1) == 'search' || $this->uri->segment(1) == 'filters') { ?>
 			<script src="<?= site_url('assets/js/alertify.min.js'); ?>" defer="defer"></script>
 			<script src="<?= site_url('assets/js/scrollTo-1.4.3.1-min.js'); ?>" defer="defer"></script>
 			<script src="<?= site_url('assets/js/nepal-district.min.js'); ?>"></script>
@@ -26,6 +26,16 @@
 		
 		<?php if($this->uri->segment(1) == 'about') { ?>
 			<script src="<?= site_url('assets/js/nivo-slider/jquery.nivo.slider.pack.js') ?>" defer="defer"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#slider').nivoSlider({
+					    effect: 'random',               // Specify sets like: 'fold,fade,sliceDown'
+					    controlNav: true,              // 1,2,3... navigation
+					    pauseOnHover: true,             // Stop animation while hovering
+					    randomStart: true             // Start on a random slide
+					});
+				});
+			</script>
 		<?php } ?>
 	</body>
 
