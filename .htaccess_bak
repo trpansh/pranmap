@@ -28,6 +28,7 @@
     # Send request via index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml)
     RewriteRule ^(.*)$ index.php/$1 [L]
 
     # Libwww-perl Access
@@ -35,6 +36,10 @@
     RewriteRule .* – [F,L]
 
     # URL Canonicalization
-    RewriteCond %{HTTP_HOST} !^www.pranmap.org$ [NC]
-    RewriteRule ^(.*)$ http://www.pranmap.org/$1 [L,R=301]
+    # RewriteCond %{HTTP_HOST} !^www.pranmap.org$ [NC]
+    # RewriteRule ^(.*)$ http://www.pranmap.org/$1 [L,R=301]
+
+    # Removes trailing slashes (prevents SEO duplicate content issues)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)/$ $1 [L,R=301]
 </IfModule>
